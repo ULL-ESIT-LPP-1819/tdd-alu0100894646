@@ -16,7 +16,9 @@ class ValorEnergetico
     end
     
     def calc_val_energetico_KJ
-        
+         
+        valor_energetico << (37.0*@grasa) + (37.0*@saturada) + (17.0*@hidratos) + (17.0*@proteinas) + (25.0*@sal)
+        valor_energetico[0]
     end
     
 end

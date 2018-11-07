@@ -13,7 +13,7 @@ RSpec.describe Tdd do
   end
 
 describe ValorEnergetico do
-  prueba1 = ValorEnergetico.new("Magdalena",10,3,15,5,7,1)
+  prueba1 = ValorEnergetico.new("Magdalena",10.0,3.0,15.0,5.0,7.0,1.0)
 
   context "Características de los alimentos" do 
     
@@ -51,7 +51,7 @@ describe ValorEnergetico do
   end
   
   it "Calcula el valor energético de un alimento en kJ" do
-    expect(1).to eq(prueba1.calc_val_energetico_KJ);
+    expect(880.0).to eq(prueba1.calc_val_energetico_KJ);
   end
   
 end
