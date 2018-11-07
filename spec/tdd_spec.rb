@@ -24,6 +24,10 @@ describe ValorEnergetico do
     it "Tiene un valor para las grasas " do 
       expect(10).to eq(prueba1.grasa)
     end
+    
+    it "Tiene un valor para las grasas saturadas" do
+      expect(3).to eq(prueba1.saturada)
+    end
 
   end 
 end
