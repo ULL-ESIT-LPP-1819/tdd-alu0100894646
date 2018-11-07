@@ -1,12 +1,14 @@
 class ValorEnergetico
 
-    attr_reader :etiqueta,:grasa,:saturada
+    attr_reader :etiqueta,:grasa,:saturada,:hidratos
     
-    def initialize(etiqueta,grasa,saturada)
+    def initialize(etiqueta,grasa,saturada,hidratos)
         
-        @etiqueta = etiqueta;
-        @grasa = grasa;
-        @saturada = saturada;
+        @etiqueta = etiqueta
+        @grasa = grasa
+        @saturada = saturada
+        @hidratos=hidratos
+        
     end
     
 end
