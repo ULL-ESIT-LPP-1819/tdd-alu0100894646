@@ -57,7 +57,7 @@ describe ValorEnergetico do
     end
     
     it "Tienhe un método para calcular el valor energetico en Kcal" do 
-      prueba1.cal_val_energetico_Kcal
+      prueba1.calc_val_energetico_Kcal
     end
     
   end

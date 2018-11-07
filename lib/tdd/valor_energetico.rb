@@ -21,4 +21,8 @@ class ValorEnergetico
         valor_energetico[0]
     end
     
+    def calc_val_energetico_Kcal
+        
+    end
+    
 end
