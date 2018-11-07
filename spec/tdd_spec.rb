@@ -13,7 +13,7 @@ RSpec.describe Tdd do
   end
 
 describe ValorEnergetico do
-  prueba1 = ValorEnergetico.new("Magdalena")
+  prueba1 = ValorEnergetico.new("Magdalena",10)
 
   context "Características de los alimentos" do 
     
@@ -22,7 +22,7 @@ describe ValorEnergetico do
     end
     
     it "Tiene un valor para las grasas " do 
-      expect("10").to eq(prueba1.grasas)
+      expect(10).to eq(prueba1.grasa)
     end
 
   end 
