@@ -1,6 +1,6 @@
 class ValorEnergetico
 
-    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal
+    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal,:valor_energetico
     
     def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas,sal)
         
@@ -11,6 +11,8 @@ class ValorEnergetico
         @azucar=azucar
         @proteinas=proteinas
         @sal = sal
+        
+        @valor_energetico = []
     end
     
 end

@@ -44,9 +44,12 @@ describe ValorEnergetico do
     it "Tiene un valor para la cantidad de sal" do
       expect(1).to eq(prueba1.sal)
     end
-  
-
   end 
+  
+  it "Tiene un método para calcular el valor energético" do 
+    prueba1.calc_val_energetico
+  end
+  
 end
 
 end
