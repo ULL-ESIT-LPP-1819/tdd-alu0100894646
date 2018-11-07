@@ -15,7 +15,7 @@ class ValorEnergetico
         @valor_energetico = []
     end
     
-    def calc_val_energetico
+    def calc_val_energetico_KJ
         
     end
     
