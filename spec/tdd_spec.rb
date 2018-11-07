@@ -46,12 +46,14 @@ describe ValorEnergetico do
     end
   end 
   
-  it "Tiene un método para calcular el valor energético en kJ" do 
-    prueba1.calc_val_energetico_KJ
-  end
+  context "Funciones de la clase ValorEnergetico"do 
+    it "Tiene un método para calcular el valor energético en kJ" do 
+      prueba1.calc_val_energetico_KJ
+    end
   
-  it "Calcula el valor energético de un alimento en kJ" do
-    expect(880.0).to eq(prueba1.calc_val_energetico_KJ);
+    it "Calcula el valor energético de un alimento en kJ" do
+      expect(880.0).to eq(prueba1.calc_val_energetico_KJ);
+    end
   end
   
 end
