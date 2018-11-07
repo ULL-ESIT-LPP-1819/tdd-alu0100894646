@@ -1,8 +1,8 @@
 class ValorEnergetico
 
-    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas
+    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal
     
-    def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas)
+    def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas,sal)
         
         @etiqueta = etiqueta
         @grasa = grasa
@@ -10,6 +10,7 @@ class ValorEnergetico
         @hidratos=hidratos
         @azucar=azucar
         @proteinas=proteinas
+        @sal = sal
     end
     
 end
