@@ -32,6 +32,10 @@ describe ValorEnergetico do
     it "Tiene un valor para la cantidad de hidratos de carbono" do
       expect(15).to eq(prueba1.hidratos)
     end
+    
+    it "Tiene un valor para la cantidad de azúcar " do
+      expect(5).to eq(prueba1.azucar)
+    end
   
 
   end 
