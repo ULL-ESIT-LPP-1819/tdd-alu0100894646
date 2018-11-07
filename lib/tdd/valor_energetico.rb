@@ -15,4 +15,8 @@ class ValorEnergetico
         @valor_energetico = []
     end
     
+    def calc_val_energetico
+        
+    end
+    
 end
