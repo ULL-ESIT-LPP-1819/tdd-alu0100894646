@@ -46,7 +46,7 @@ class ValorEnergetico
         puts "Valores Nutricionales para #{@etiqueta}"
         puts "\t\t Por 100g/ml de producto | IR (por 100g/ml) | Porcion de #{@porcion*100}g/ml | IR por #{@porcion*100}g"
         puts "Valor Energético  #{@valor_energetico[0]} Kj \t\t | #{(@valor_energetico[0]/@ingesta_recomendada[0]).round(2)*100}%  \t\t| #{(@valor_energetico[0]*@porcion).round(2)}Kj \t\t| #{((@valor_energetico[0]/@ingesta_recomendada[0])*@porcion).round(2)*100}%"        
-        puts "(Kj/Kcal)         #{@valor_energetico[1]} Kcal  \t\t| #{(@valor_energetico[1]/@ingesta_recomendada[1]).round(2)*100}% \t\t|#{(@valor_energetico[1]*@porcion).round(2)}Kcal \t\t| #{((@valor_energetico[1]/@ingesta_recomendada[1])*@porcion).round(2)*100}%"
+        puts "(Kj/Kcal)         #{@valor_energetico[1]} Kcal  \t\t| #{(@valor_energetico[1]/@ingesta_recomendada[1]).round(2)*100}% \t\t| #{(@valor_energetico[1]*@porcion).round(2)}Kcal \t\t| #{((@valor_energetico[1]/@ingesta_recomendada[1])*@porcion).round(2)*100}%"
         puts "Grasas de las     #{@grasa}g  \t\t| #{(@grasa/@ingesta_recomendada[2]).round(2)*100}%  \t\t| #{(@grasa*@porcion).round(2)} \t\t| #{((@grasa/@ingesta_recomendada[2])*@porcion).round(2)*100}%"
         puts "cuales:"
         puts "saturadas         #{@saturada}g  \t\t| #{(@saturada/@ingesta_recomendada[3]).round(2)*100}%  \t\t| #{(@saturada*@porcion).round(2)}g \t\t| #{((@saturada/@ingesta_recomendada[3])*@porcion).round(2)*100}%"
@@ -60,6 +60,6 @@ class ValorEnergetico
     
 end
 
-prueba = ValorEnergetico.new("Galletas",10.5,5.1,77.0,24.0,7.6,0.83,6.1)
+#prueba = ValorEnergetico.new("Galletas",10.5,5.1,77.0,24.0,7.6,0.83,6.1)
 
-prueba.to_s
+#prueba.to_s
