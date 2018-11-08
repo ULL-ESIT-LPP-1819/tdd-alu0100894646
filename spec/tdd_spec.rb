@@ -14,9 +14,9 @@ RSpec.describe Tdd do
 
 describe ValorEnergetico do
   
-  prueba1 = ValorEnergetico.new("Magdalena",70.0,20.0,260.0,90.0,50.0,6.0)
-  prueba1.calc_val_energetico_KJ
-  prueba1.calc_val_energetico_Kcal
+  prueba1 = ValorEnergetico.new("Magdalena",70.0,20.0,260.0,90.0,50.0,6.0,35.0)
+  #prueba1.calc_val_energetico_KJ
+  #prueba1.calc_val_energetico_Kcal
   
   
   context "Características de los alimentos" do 
@@ -69,7 +69,7 @@ describe ValorEnergetico do
     end
     
     it "Tiene un método para obtener la etiqueta formateada (to_s)" do
-      expect(prueba1).to to_s
+      prueba1.to_s
     end
     
   end
