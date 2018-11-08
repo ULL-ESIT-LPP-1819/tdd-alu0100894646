@@ -68,7 +68,9 @@ describe ValorEnergetico do
       expect(1906.0).to eq(prueba1.calc_val_energetico_Kcal  )
     end
     
-    
+    it "Tiene un método para obtener la etiqueta formateada (to_s)" do
+      expect(prueba1).to to_s
+    end
     
   end
   
