@@ -7,8 +7,8 @@ class ValorEnergetico
         @etiqueta = etiqueta
         @grasa = grasa
         @saturada = saturada
-        @hidratos=hidratos
-        @azucar=azucar
+        @hidratos= hidratos
+        @azucar= azucar
         @proteinas=proteinas
         @sal = sal
         
@@ -17,12 +17,20 @@ class ValorEnergetico
     
     def calc_val_energetico_KJ
          
-        valor_energetico << (37.0*@grasa) + (37.0*@saturada) + (17.0*@hidratos) + (17.0*@proteinas) + (25.0*@sal)
+        if @valor_energetico.length < 3
+            valor_energetico << (37.0*@grasa) + (17.0*@hidratos) + (17.0*@proteinas) + (25.0*@sal)
+        end
+        
         valor_energetico[0]
     end
     
     def calc_val_energetico_Kcal
         
+        if @valor_energetico.length < 3
+            valor_energetico << (9.0*@grasa) + (4.0*@hidratos) + (4.0*@proteinas) + (6.0*@sal)
+        end
+        
+        valor_energetico[1]
     end
     
 end
