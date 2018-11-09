@@ -1,8 +1,8 @@
 class ValorEnergetico
 
-    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal,:valor_energetico,:porcion
+    attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal,:valor_energetico,:porcion,:num_porciones
     
-    def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas,sal,porcion)
+    def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas,sal,porcion,num_porciones)
         
         @etiqueta = etiqueta
         @grasa = grasa
@@ -13,7 +13,7 @@ class ValorEnergetico
         @sal = sal
         
         @valor_energetico = []
-        
+        @num_porciones = num_porciones;
         @porcion = porcion/100
         
         calc_val_energetico_KJ
@@ -43,7 +43,7 @@ class ValorEnergetico
     
     def to_s
         
-        puts "Valores Nutricionales para #{@etiqueta}"
+        puts "Valores Nutricionales para #{@etiqueta} con porciones de tamaño #{@porcion*100}g y con #{@num_porciones} porcion(es)"
         puts "\t\t Por 100g/ml de producto | IR (por 100g/ml) | Porcion de #{@porcion*100}g/ml | IR por #{@porcion*100}g"
         puts "Valor Energético  #{@valor_energetico[0]} Kj \t\t | #{(@valor_energetico[0]/@ingesta_recomendada[0]).round(2)*100}%  \t\t| #{(@valor_energetico[0]*@porcion).round(2)}Kj \t\t| #{((@valor_energetico[0]/@ingesta_recomendada[0])*@porcion).round(2)*100}%"        
         puts "(Kj/Kcal)         #{@valor_energetico[1]} Kcal  \t\t| #{(@valor_energetico[1]/@ingesta_recomendada[1]).round(2)*100}% \t\t| #{(@valor_energetico[1]*@porcion).round(2)}Kcal \t\t| #{((@valor_energetico[1]/@ingesta_recomendada[1])*@porcion).round(2)*100}%"

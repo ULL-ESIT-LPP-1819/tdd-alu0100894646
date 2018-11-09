@@ -14,7 +14,7 @@ RSpec.describe Tdd do
 
 describe ValorEnergetico do
   
-  prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0)
+  prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
   
   
   context "Características de los alimentos" do 
