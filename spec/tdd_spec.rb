@@ -74,4 +74,15 @@ describe ValorEnergetico do
   
 end
 
+describe Dll_etiqueta do 
+  
+  context "Pruebas de la clase Lista" do 
+    
+    it "Tiene un constructor" do 
+      lista_prueba = new.Dll_etiqueta(nil,nil)
+    end
+    
+  end
+end
+
 end
