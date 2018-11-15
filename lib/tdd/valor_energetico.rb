@@ -23,6 +23,16 @@ class ValorEnergetico
         
     end
     
+    def get_salt
+       
+       if(@sal < 6.0)
+        "Bajo"
+       else
+        "Alto"
+       end
+        
+    end
+    
     def calc_val_energetico_KJ
          
         if @valor_energetico.length < 3
