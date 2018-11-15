@@ -89,6 +89,25 @@ describe Dll do
     end
     
   end
+  
+  context "Pruebas del nodo" do
+    
+    nodo_lista = Node.new(0,nil,nil)
+    
+    it "Tiene un valor " do 
+      expect(0).to eq(nodo_lista.value)
+    end
+    
+    it "Tiene un next" do 
+      expect(nil).to eq(nodo_lista.next)
+    end
+    
+    it "Tiene un prev" do
+      expect(nil).to eq(nodo_lista.next)
+    end
+    
+  end
+  
 end
 
 end
