@@ -84,6 +84,10 @@ describe Dll do
       expect(nil).to eq(lista_prueba.head)
     end
     
+    it "Tiene un tail" do
+      expect(nil).to eq(lista_prueba.tail)
+    end
+    
   end
 end
 
