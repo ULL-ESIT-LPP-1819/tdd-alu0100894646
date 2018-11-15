@@ -125,7 +125,11 @@ describe Dll do
     it "Tiene un método para extraer por la cola" do 
       lista_prueba.insert_head(1)
       lista_prueba.insert_head(2)
-      expect(lista_prueba.get_tail.value).to eq(2)
+      expect(lista_prueba.get_tail.value).to eq(10)
+    end
+    
+    it "Tiene un método para ver si la lista esta vacia"do
+      expect(lista_prueba.empty?).to eq(false)
     end
     
   end

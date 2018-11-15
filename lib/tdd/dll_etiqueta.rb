@@ -33,15 +33,17 @@ class Dll
            @head=nodo
        else
            @tail.next=nodo
-           nodo.prev=tail
+           nodo.prev=@tail
            @tail=nodo
        end
     end
     
     def get_head
-        
         @head = @head.next
-        
+    end
+    
+    def get_tail
+       @tail = @tail.prev 
     end
     
 end
