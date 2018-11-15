@@ -111,9 +111,15 @@ describe Dll do
       expect(lista_prueba.head.value).to eq(10)
     end
     
-    it "Tiene un método para insertar por la cola" do 
+    it "Tiene un método para insertar por el tail" do 
       lista_prueba.insert_tail(1)
       expect(lista_prueba.tail.value).to eq(1)
+    end
+    
+    it "Tiene un método para extraer por el head" do
+      lista_prueba.insert_head(1)
+      lista_prueba.insert_head(2)
+      expect(lita_prueba.get_head.value)
     end
     
   end
