@@ -38,6 +38,10 @@ class Dll
        end
     end
     
-    
+    def get_head
+        
+        @head = @head.next
+        
+    end
     
 end

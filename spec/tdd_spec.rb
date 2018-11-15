@@ -119,7 +119,7 @@ describe Dll do
     it "Tiene un método para extraer por el head" do
       lista_prueba.insert_head(1)
       lista_prueba.insert_head(2)
-      expect(lita_prueba.get_head.value)
+      expect(lista_prueba.get_head.value).to eq(1)
     end
     
   end
