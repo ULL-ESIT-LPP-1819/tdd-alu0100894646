@@ -39,11 +39,15 @@ class Dll
     end
     
     def get_head
+        dummy = @head
         @head = @head.next
+        dummy
     end
     
     def get_tail
+        dummy = @tail
        @tail = @tail.prev 
+       dummy
     end
     
     def empty?

@@ -96,7 +96,7 @@ describe Dll do
   
   context "Pruebas de la clase Lista" do 
     
-    lista_prueba = Dll.new()
+      lista_prueba = Dll.new()
     
     it "Tiene un head" do 
       expect(nil).to eq(lista_prueba.head)
@@ -108,7 +108,8 @@ describe Dll do
     
     it "Tiene un método para insertar por el head" do
       lista_prueba.insert_head(10)
-      expect(lista_prueba.head.value).to eq(10)
+      lista_prueba.insert_head(5)
+      expect(lista_prueba.head.value).to eq(5)
     end
     
     it "Tiene un método para insertar por el tail" do 
@@ -119,13 +120,13 @@ describe Dll do
     it "Tiene un método para extraer por el head" do
       lista_prueba.insert_head(1)
       lista_prueba.insert_head(2)
-      expect(lista_prueba.get_head.value).to eq(1)
+      expect(lista_prueba.get_head.value).to eq(2)
     end
     
     it "Tiene un método para extraer por la cola" do 
       lista_prueba.insert_head(1)
       lista_prueba.insert_head(2)
-      expect(lista_prueba.get_tail.value).to eq(10)
+      expect(lista_prueba.get_tail.value).to eq(1)
     end
     
     it "Tiene un método para ver si la lista esta vacia"do
@@ -134,7 +135,27 @@ describe Dll do
     
   end
   
-  
+  context "Pruebas de la sal"do
+    
+    before :all do
+      dll_list = Dll.new()
+      etiqueta1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+      etiqueta2 = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,1.0,25.0,8)
+      etiqueta3 = ValorEnergetico.new("Lomo",31.6,11.0,57.6,56.8,6.0,2.11,25.0,8)
+      etiqueta4 = ValorEnergetico.new("Mantequilla",31.6,11.0,57.6,56.8,6.0,8.11,25.0,8)
+      etiqueta5 = ValorEnergetico.new("Pistachos",31.6,11.0,57.6,56.8,6.0,10.11,25.0,8)
+      dll_list.insert_head(etiqueta1)
+      dll_list.insert_tail(etiqueta2)
+      dll_list.insert_tail(etiqueta3)
+      dll_list.insert_tail(etiqueta4)
+      dll_list.insert_tail(etiqueta5)
+    end
+    
+    it "Etiqueta tiene un método que te devuelve su cantidad de sal" do
+      expect(etiqueta1.get_salt).to be("baja")
+    end
+    
+  end
   
 end
 
