@@ -76,20 +76,6 @@ end
 
 describe Dll do 
   
-  context "Pruebas de la clase Lista" do 
-    
-    lista_prueba = Dll.new()
-    
-    it "Tiene un head" do 
-      expect(nil).to eq(lista_prueba.head)
-    end
-    
-    it "Tiene un tail" do
-      expect(nil).to eq(lista_prueba.tail)
-    end
-    
-  end
-  
   context "Pruebas del nodo" do
     
     nodo_lista = Node.new(0,nil,nil)
@@ -107,6 +93,22 @@ describe Dll do
     end
     
   end
+  
+  context "Pruebas de la clase Lista" do 
+    
+    lista_prueba = Dll.new()
+    
+    it "Tiene un head" do 
+      expect(nil).to eq(lista_prueba.head)
+    end
+    
+    it "Tiene un tail" do
+      expect(nil).to eq(lista_prueba.tail)
+    end
+    
+  end
+  
+  
   
 end
 
