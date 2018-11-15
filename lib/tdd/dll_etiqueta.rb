@@ -46,4 +46,9 @@ class Dll
        @tail = @tail.prev 
     end
     
+    def empty?
+        @head == nil
+        @tail == nil
+    end
+    
 end
