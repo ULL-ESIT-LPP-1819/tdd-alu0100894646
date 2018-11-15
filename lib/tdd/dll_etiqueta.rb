@@ -4,8 +4,10 @@ class Dll
     
     attr_accessor :head,:tail
     
-    def initialize()
+    def initialize
         @head = nil
         @tail = nil
     end
+    
+    
 end

@@ -106,6 +106,11 @@ describe Dll do
       expect(nil).to eq(lista_prueba.tail)
     end
     
+    it "Tiene un método para insertar por el head" do
+      lista_prueba.insert_head(10)
+      expect(lista_prueba.head.value).to eq(10)
+    end
+    
   end
   
   
