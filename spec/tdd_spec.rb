@@ -74,12 +74,14 @@ describe ValorEnergetico do
   
 end
 
-describe Dll_etiqueta do 
+describe Dll do 
   
   context "Pruebas de la clase Lista" do 
     
-    it "Tiene un constructor" do 
-      lista_prueba = new.Dll_etiqueta(nil,nil)
+    lista_prueba = Dll.new()
+    
+    it "Tiene un head" do 
+      expect(nil).to eq(lista_prueba.head)
     end
     
   end
