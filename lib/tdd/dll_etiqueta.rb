@@ -24,4 +24,18 @@ class Dll
         
     end
     
+    def insert_tail(value)
+       
+       nodo = Node.new(value,nil,nil)
+       
+       if(@tail ==nil)
+           @tail=nodo
+           @head=nodo
+       else
+           @tail.next=nodo
+           nodo.prev=tail
+           @tail=nodo
+       end
+    end
+    
 end
