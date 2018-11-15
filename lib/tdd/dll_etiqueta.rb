@@ -54,5 +54,4 @@ class Dll
         @head == nil
         @tail == nil
     end
-    
 end

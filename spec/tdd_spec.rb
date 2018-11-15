@@ -155,6 +155,14 @@ describe Dll do
       expect(@etiqueta1.get_salt).to eq("Bajo")
     end
     
+    it "Prueba del to_S" do 
+      actual = @dll_list.head
+      while actual != nil
+        puts actual.value.get_salt
+        actual = actual.next
+      end
+    end
+    
   end
   
 end
