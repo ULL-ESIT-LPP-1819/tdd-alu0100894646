@@ -195,6 +195,10 @@ describe Individuo do
       expect(@individuo1.class == Individuo).to be(true)
     end
     
+    it "Pertenece a una Jerarquia con Object" do
+      expect(@individuo1.is_a?Object).to eq(true)
+    end
+    
   end
 end
 
