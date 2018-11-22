@@ -199,6 +199,10 @@ describe Individuo do
       expect(@individuo1.is_a?Object).to eq(true)
     end
     
+    it "Pertenece a una Jerarquia con BasicObject" do 
+      expect(@individuo1.is_a?BasicObject).to eq(true)
+    end
+    
   end
 end
 
