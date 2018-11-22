@@ -260,6 +260,12 @@ describe Paciente do
       @lista.insert_head(@paciente5)
     end
     
+    it "Comprobando la clasificación " do
+      aux = @lista.head
+      expect(aux.value.imc).to eq("Obeso")
+      
+    end
+    
   end
   
 end
