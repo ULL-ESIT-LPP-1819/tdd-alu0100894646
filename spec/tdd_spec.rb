@@ -156,15 +156,37 @@ describe Dll do
     end
     
     it "Prueba del to_S" do 
-      actual = @dll_list.head
-      while actual != nil
-        puts actual.value.get_salt
-        actual = actual.next
-      end
+      @dll_list.to_s
+      #actual = @dll_list.head
+      #while actual != nil
+      #  puts actual.value.get_salt
+      #  actual = actual.next
+      #end
     end
     
   end
   
+end
+
+describe Individuo do
+  
+  context "Medidas Antropométricas " do
+    
+    before :all do 
+      
+      @individuo1 =  Individuo.new("Pepito","Rodriguez");
+      
+    end
+    
+    it "Tiene un nombre" do
+      expect(@individuo1.nombre).to eq("Pepito")
+    end
+    
+    it "tiene un apellido"do
+      expect(@individuo1.apellido).to eq("Rodriguez")
+    end
+    
+  end
 end
 
 end

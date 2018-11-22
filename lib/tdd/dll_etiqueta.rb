@@ -45,7 +45,7 @@ class Dll
     end
     
     def get_tail
-        dummy = @tail
+       dummy = @tail
        @tail = @tail.prev 
        dummy
     end
@@ -53,5 +53,13 @@ class Dll
     def empty?
         @head == nil
         @tail == nil
+    end
+    
+    def to_s
+       it = @head
+       while it!=nil
+          puts it.value.to_s
+          it=it.next
+       end
     end
 end
