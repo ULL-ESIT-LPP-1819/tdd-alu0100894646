@@ -191,6 +191,10 @@ describe Individuo do
       expect(@individuo1.instance_of?Individuo).to be(true)
     end
     
+    it "Tipo de la clase " do 
+      expect(@individuo1.class == Individuo).to be(true)
+    end
+    
   end
 end
 
@@ -224,6 +228,14 @@ describe Paciente do
   end
   
   context "Comprobando la jerarquía de la clase Paciente" do
+    
+    it "Paciente pertenece a la jerarquia de Individuo" do
+      expect(@paciente1.is_a?Individuo).to eq(true)
+    end
+    
+    it "Paciente pertenece a la jerarquia de Object" do
+      expect(@paciente1.is_a?Object).to eq(true)
+    end
     
   end
   
