@@ -14,18 +14,18 @@ end
 class Paciente < Individuo
    attr_reader :peso,:talla, :edad,:sexo,:cintura,:cadera
    
-   def initialize(datos)
-      super(datos[0],datos[1])
-      @peso = datos[2]
-      @talla = datos[3]
-      @edad = datos[4]
-      if(datos[5] == "Hombre")
+   def initialize(nombre,apellido,peso,talla,edad,sexo,cintura,cadera)
+      super(nombre,apellido)
+      @peso = peso
+      @talla = talla
+      @edad = edad
+      if(sexo == "Hombre")
             @sexo = 1;
             
-      elsif(datos[5] == "Mujer")
+      elsif(sexo == "Mujer")
             @sexo = 0;
       end
-      @cintura = (datos[6][0] + datos[6][1])/2
-      @cadera = (datos[7][0]+datos[7][1])/2
+      @cintura = (cintura[0] + cintura[1])/2
+      @cadera = (cadera[7][0]+cadera[1])/2
    end
 end

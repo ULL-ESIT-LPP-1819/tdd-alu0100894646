@@ -173,9 +173,8 @@ describe Individuo do
   context "Medidas Antropométricas " do
     
     before :all do 
-      
       @individuo1 =  Individuo.new("Pepito","Rodriguez");
-      @paciente1 = Paciente.new()
+      
       
     end
     
@@ -189,6 +188,22 @@ describe Individuo do
     end
     
   end
+end
+
+describe Paciente do
+  
+  context "Pruebas de Paciente" do 
+    
+    before :all do
+      @paciente1 = Paciente.new("Juanito","Hdez",90,1.80,25,"Hombre",[55.0,56.0],[60.0.62.0])
+    end
+    
+    it "Probando el initialize" do 
+      
+    end
+    
+  end
+  
 end
 
 end
