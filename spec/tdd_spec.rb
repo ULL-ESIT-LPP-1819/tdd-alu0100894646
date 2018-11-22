@@ -174,8 +174,6 @@ describe Individuo do
     
     before :all do 
       @individuo1 =  Individuo.new("Pepito","Rodriguez");
-      
-      
     end
     
     it "Tiene un nombre" do
