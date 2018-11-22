@@ -243,6 +243,24 @@ describe Paciente do
     
   end
   
+  context "Haciendo la prueba de la clasificación de individuos" do 
+    
+    before :all do
+      
+      @lista = Dll.new()
+      @paciente1 = Paciente.new("Pepito","Rguez",150,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente2 = Paciente.new("Manoltio","Gafotas",100,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente3 = Paciente.new("Doraemon","El gato",85,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente4 = Paciente.new("Raul","Zamora",70,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente5 = Paciente.new("Manuel","Hdez",55,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @lista.insert_head(@paciente1)
+      @lista.insert_head(@paciente2)
+      @lista.insert_head(@paciente3)
+      @lista.insert_head(@paciente4)
+      @lista.insert_head(@paciente5)
+    end
+    
+  end
   
 end
 
