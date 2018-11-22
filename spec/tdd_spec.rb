@@ -187,6 +187,10 @@ describe Individuo do
       expect(@individuo1.apellido).to eq("Rodriguez")
     end
     
+    it "Instancia de Individuo" do
+      expect(@individuo1.instance_of?Individuo).to be(true)
+    end
+    
   end
 end
 
