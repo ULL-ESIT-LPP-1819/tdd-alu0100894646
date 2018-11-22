@@ -28,4 +28,23 @@ class Paciente < Individuo
       @cintura = (cintura[0] + cintura[1])/2
       @cadera = (cadera[0]+cadera[1])/2
    end
+   
+    def imc_calc
+       
+       @imc = (@peso/(@talla*@talla)).round(2)
+       
+        if(@imc < 18.5)
+            "Delgado"
+       
+        elsif (@imc > 18.5 && @imc < 24.9)
+            "Aceptable"
+            
+        elsif (@imc > 25 && @imc <29.9)
+            "Sobrepeso"
+                
+        elsif(@imc > 30)
+            "Obesidad"
+        end
+    end
+            
 end

@@ -260,9 +260,22 @@ describe Paciente do
       @lista.insert_head(@paciente5)
     end
     
-    it "Comprobando la clasificación " do
-      aux = @lista.head
-      expect(aux.value.imc).to eq("Obeso")
+    it "Comprobando si tiene un método para clasificar" do
+      @aux = @lista.head
+      expect(@aux.value.imc_calc).to eq("Delgado")
+    end
+    
+    it "Prueba de la clasificación " do 
+      @aux = @lista.head
+      expect(@aux.value.imc_calc).to eq("Delgado")
+      @aux = @aux.next
+      expect(@aux.value.imc_calc).to eq("Aceptable")
+      @aux = @aux.next
+      expect(@aux.value.imc_calc).to eq("Aceptable")
+      @aux = @aux.next
+      expect(@aux.value.imc_calc).to eq("Sobrepeso")
+      @aux = @aux.next
+      expect(@aux.value.imc_calc).to eq("Obesidad")
       
     end
     
