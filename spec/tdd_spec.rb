@@ -196,12 +196,12 @@ end
 
 describe Paciente do
   
-  context "Pruebas de Paciente" do 
-    
-    before :all do
+  before :all do
       @paciente1 = Paciente.new("Pepito","Rguez",100,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
-    end
+  end
     
+  context "Comprobando la instancia y clase a la que pertence Paciente" do 
+  
     it "Comprobando la instancia del objeto" do 
       expect(@paciente1.instance_of?Paciente).to be(true)
     end
@@ -222,6 +222,11 @@ describe Paciente do
       expect(@paciente1.instance_of?BasicObject).to eq(false)
     end
   end
+  
+  context "Comprobando la jerarquía de la clase Paciente" do
+    
+  end
+  
   
 end
 
