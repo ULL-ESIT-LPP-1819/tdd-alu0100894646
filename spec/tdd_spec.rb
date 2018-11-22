@@ -156,7 +156,7 @@ describe Dll do
     end
     
     it "Prueba del to_S" do 
-      @dll_list.to_s
+      #@dll_list.to_s
       #actual = @dll_list.head
       #while actual != nil
       #  puts actual.value.get_salt
@@ -175,12 +175,14 @@ describe Individuo do
     before :all do 
       
       @individuo1 =  Individuo.new("Pepito","Rodriguez");
+      @paciente1 = Paciente.new()
       
     end
     
     it "Tiene un nombre" do
       expect(@individuo1.nombre).to eq("Pepito")
     end
+    
     
     it "tiene un apellido"do
       expect(@individuo1.apellido).to eq("Rodriguez")
