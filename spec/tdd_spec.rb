@@ -217,6 +217,10 @@ describe Paciente do
     it "No es una instancia de  la clase Object" do
       expect(@paciente1.instance_of?Object). to eq(false)
     end
+    
+    it "no es una instancia de la clase BasicObject" do
+      expect(@paciente1.instance_of?BasicObject).to eq(false)
+    end
   end
   
 end
