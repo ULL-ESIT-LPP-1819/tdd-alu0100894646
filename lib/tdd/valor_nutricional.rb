@@ -26,6 +26,6 @@ class Paciente < Individuo
             @sexo = 0;
       end
       @cintura = (cintura[0] + cintura[1])/2
-      @cadera = (cadera[7][0]+cadera[1])/2
+      @cadera = (cadera[0]+cadera[1])/2
    end
 end

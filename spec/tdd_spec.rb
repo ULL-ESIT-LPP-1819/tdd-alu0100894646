@@ -195,11 +195,11 @@ describe Paciente do
   context "Pruebas de Paciente" do 
     
     before :all do
-      @paciente1 = Paciente.new("Juanito","Hdez",90,1.80,25,"Hombre",[55.0,56.0],[60.0.62.0])
+      @paciente1 = Paciente.new("Pepito","Rguez",100,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
     end
     
     it "Probando el initialize" do 
-      
+      expect(@paciente1.instance_of?Paciente).to be(true)
     end
     
   end
