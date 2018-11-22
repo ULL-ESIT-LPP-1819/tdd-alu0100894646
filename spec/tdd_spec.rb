@@ -210,6 +210,13 @@ describe Paciente do
       expect(@paciente1.class == Paciente).to eq(true)
     end
     
+    it "No es de la clase Individuo" do
+      expect(@paciente1.class != Individuo). to eq(true)
+    end
+    
+    it "No es una instancia de  la clase Object" do
+      expect(@paciente1.instance_of?Object). to eq(false)
+    end
   end
   
 end
