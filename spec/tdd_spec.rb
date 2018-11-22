@@ -237,6 +237,10 @@ describe Paciente do
       expect(@paciente1.is_a?Object).to eq(true)
     end
     
+    it "Paciente pertenece a la jerarquia de BasicObject" do
+      expect(@paciente1.is_a?Object).to eq(true)
+    end
+    
   end
   
   
