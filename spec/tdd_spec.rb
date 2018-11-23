@@ -185,6 +185,10 @@ describe Individuo do
       expect(@individuo1.apellido).to eq("Rodriguez")
     end
     
+    it "Probando el to_s " do 
+      expect(@individuo1.to_s.is_a?String).to eq(true)
+    end
+    
     it "Instancia de Individuo" do
       expect(@individuo1.instance_of?Individuo).to be(true)
     end
@@ -248,7 +252,7 @@ describe Paciente do
     end
     
     it "Probando el to_s " do 
-      
+      expect(@paciente1.to_s.is_a?String).to eq(true)
     end
     
     
