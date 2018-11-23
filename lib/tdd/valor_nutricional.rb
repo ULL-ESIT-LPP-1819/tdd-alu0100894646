@@ -46,5 +46,8 @@ class Paciente < Individuo
             "Obesidad"
         end
     end
-            
+
+    def to_s 
+       "#{super.to_s} #{@peso} #{@talla} #{@edad} #{@sexo} #{@cintura} #{@cadera}" 
+    end
 end

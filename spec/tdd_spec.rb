@@ -247,6 +247,11 @@ describe Paciente do
       expect(@paciente1.is_a?Object).to eq(true)
     end
     
+    it "Probando el to_s " do 
+      
+    end
+    
+    
   end
   
   context "Haciendo la prueba de la clasificación de individuos" do 
