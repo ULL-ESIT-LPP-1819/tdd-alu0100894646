@@ -248,7 +248,7 @@ describe Paciente do
     end
     
     it "Paciente pertenece a la jerarquia de BasicObject" do
-      expect(@paciente1.is_a?Object).to eq(true)
+      expect(@paciente1.is_a?BasicObject).to eq(true)
     end
     
     it "Probando el to_s " do 
@@ -257,6 +257,7 @@ describe Paciente do
     
     
   end
+  
   
   context "Haciendo la prueba de la clasificación de individuos" do 
     
