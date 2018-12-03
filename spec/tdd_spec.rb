@@ -89,7 +89,9 @@ describe ValorEnergetico do
   end
   
   it " # Leche == Leche " do 
+    expect(@leche == @leche).to eq(true)
   end
+  
 end
 end
 
