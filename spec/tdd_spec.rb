@@ -226,8 +226,8 @@ describe Dll do
        @dll_list.insert_tail(@etiqueta1)
        @dll_list.insert_tail(@etiqueta2)
        @dll_list.insert_tail(@etiqueta3)
-       puts @dll_list.select{|i| i.etiqueta.size < 5}
-       #expect(@dll_list.select{|i| i.etiqueta.size<5}).to eq("Lomo")
+       #puts @dll_list.select{|i| i.etiqueta.size < 5}
+       expect(@dll_list.select{|i| i == @etiqueta3}).to eq([@etiqueta3])
      end
      
      it "comprobando el metodo max " do 
@@ -265,6 +265,13 @@ describe Dll do
         @lista.insert_tail(@francisco)
         @lista.insert_tail(@pepito)
         expect(@lista.collect{ |i| i.to_s}).to eq(["Jose Rodriguez","Francisco Hernández","Pepito Perez"])
+      end
+      
+      it "Comprobando el metodo select" do 
+        @lista.insert_tail(@jose)
+        @lista.insert_tail(@francisco)
+        @lista.insert_tail(@pepito)
+        expect(@lista.select{|i| i == @jose}).to eq([@jose])
       end
     end
     
