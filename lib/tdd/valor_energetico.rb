@@ -1,5 +1,6 @@
 class ValorEnergetico
 
+    include Comparable
     attr_reader :etiqueta,:grasa,:saturada,:hidratos,:azucar,:proteinas,:sal,:valor_energetico,:porcion,:num_porciones
     
     def initialize(etiqueta,grasa,saturada,hidratos,azucar,proteinas,sal,porcion,num_porciones)
@@ -21,6 +22,11 @@ class ValorEnergetico
         #                       Kj      Kcal   Fat Fsat HCar  Azuc  Prot Sal
         @ingesta_recomendada = [8400.0,2000.0,70.0,20.0,260.0,90.0,50.0,6.0]
         
+    end
+    
+    def <=>(other)
+        return nil unless other.instance_of?ValorEnergetico
+        @etiqueta <=> other.etiqueta
     end
     
     def get_salt

@@ -81,7 +81,11 @@ describe ValorEnergetico do
     end
   
   it "# Magadalena < Galletas " do 
-    expect(@magdalena < @galletas).to eq(true)
+    expect(@magdalena < @galletas).to eq(false)
+  end
+
+  it "" do 
+    
   end
 end
 end
