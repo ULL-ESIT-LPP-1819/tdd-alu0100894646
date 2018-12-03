@@ -255,6 +255,11 @@ describe Individuo do
     it "# Francisco == Francisco" do 
       expect(@persona2 == @persona2).to eq(true)
     end
+    
+    it "# Jose <= Pilar" do 
+      expect(@persona1<=@persona3).to eq(true)
+    end
+    
   end
 end
 
