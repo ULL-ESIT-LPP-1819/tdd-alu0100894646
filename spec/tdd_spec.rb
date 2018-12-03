@@ -285,6 +285,13 @@ describe Dll do
         @lista.insert_tail(@francisco)
         expect(@lista.min).to eq(@francisco)
       end
+      
+      it "Comprobando el metodo sort" do 
+        @lista.insert_tail(@jose)
+        @lista.insert_tail(@francisco)
+        @lista.insert_tail(@pepito)
+        expect(@lista.sort).to eq([@francisco,@jose,@pepito])
+      end
     end
     
   end
