@@ -80,12 +80,15 @@ describe ValorEnergetico do
       @leche = ValorEnergetico.new("Leche",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
     end
   
-  it "# Magadalena < Galletas " do 
-    expect(@magdalena < @galletas).to eq(false)
+  it "# Magadalena > Galletas " do 
+    expect(@magdalena > @galletas).to eq(true)
   end
 
-  it "" do 
-    
+  it "# Galletas < Leche" do 
+    expect(@galletas < @leche).to eq(true)
+  end
+  
+  it " # Leche == Leche " do 
   end
 end
 end
