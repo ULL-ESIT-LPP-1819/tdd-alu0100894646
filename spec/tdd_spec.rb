@@ -201,11 +201,11 @@ describe Dll do
       
       before :each do 
         @dll_list = Dll.new()
-        @etiqueta1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-        @etiqueta2 = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,1.0,25.0,8)
-        @etiqueta3 = ValorEnergetico.new("Lomo",31.6,11.0,57.6,56.8,6.0,2.11,25.0,8)
-        @etiqueta4 = ValorEnergetico.new("Mantequilla",31.6,11.0,57.6,56.8,6.0,8.11,25.0,8)
-        @etiqueta5 = ValorEnergetico.new("Pistachos",31.6,11.0,57.6,56.8,6.0,10.11,25.0,8)
+        @etiqueta1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,16.0,0.11,25.0,8)
+        @etiqueta2 = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,4.0,1.0,25.0,8)
+        @etiqueta3 = ValorEnergetico.new("Lomo",31.6,11.0,57.6,56.8,8.0,2.11,25.0,8)
+        @etiqueta4 = ValorEnergetico.new("Mantequilla",31.6,11.0,57.6,56.8,1.0,8.11,25.0,8)
+        @etiqueta5 = ValorEnergetico.new("Pistachos",31.6,11.0,57.6,56.8,5.0,10.11,25.0,8)
         #@dll_list.insert_head(@etiqueta1)
         #@dll_list.insert_tail(@etiqueta2)
         #@dll_list.insert_tail(@etiqueta3)
@@ -220,6 +220,14 @@ describe Dll do
        
        #expect(@dll_list.map{|i| i.to_s}).to eq(["Nutella","Galletas","Lomo"])
        expect(@dll_list.collect{|i| i.to_s}).to eq(["Nutella","Galletas","Lomo"])
+     end
+     
+     it "Comprobando el metodo select" do
+       @dll_list.insert_tail(@etiqueta1)
+       @dll_list.insert_tail(@etiqueta2)
+       @dll_list.insert_tail(@etiqueta3)
+       puts @dll_list.select{|i| i.etiqueta.size < 5}
+       expect(@dll_list.select{|i| i.etiqueta.size<5}).to eq("Lomo")
      end
      
     end
