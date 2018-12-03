@@ -227,7 +227,13 @@ describe Dll do
        @dll_list.insert_tail(@etiqueta2)
        @dll_list.insert_tail(@etiqueta3)
        puts @dll_list.select{|i| i.etiqueta.size < 5}
-       expect(@dll_list.select{|i| i.etiqueta.size<5}).to eq("Lomo")
+       #expect(@dll_list.select{|i| i.etiqueta.size<5}).to eq("Lomo")
+     end
+     
+     it "comprobando el metodo max " do 
+       @dll_list.insert_tail(@etiqueta1)
+       @dll_list.insert_tail(@etiqueta2)
+       expect(@dll_list.max).to eq(@etiqueta1)
      end
      
     end
