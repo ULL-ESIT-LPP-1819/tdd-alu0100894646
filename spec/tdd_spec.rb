@@ -96,6 +96,9 @@ describe ValorEnergetico do
     expect(@galletas <= @leche).to eq(true)
   end
   
+  it "# Magdalena >= Leche" do 
+    expect(@magdalena >= @leche).to eq(true)
+  end
   
   end
 end
