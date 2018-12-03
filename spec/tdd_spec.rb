@@ -257,10 +257,15 @@ describe Dll do
         @lista = Dll.new()
         @jose = Individuo.new("Jose","Rodriguez")
         @francisco = Individuo.new("Francisco","Hernández")
-        @pepito = Individuo.new("Peputo","Perez")
+        @pepito = Individuo.new("Pepito","Perez")
       end
       
-      
+      it "Comprobando el metodo del collect" do 
+        @lista.insert_tail(@jose)
+        @lista.insert_tail(@francisco)
+        @lista.insert_tail(@pepito)
+        expect(@lista.collect{ |i| i.to_s}).to eq(["Jose Rodriguez","Francisco Hernández","Pepito Perez"])
+      end
     end
     
   end
