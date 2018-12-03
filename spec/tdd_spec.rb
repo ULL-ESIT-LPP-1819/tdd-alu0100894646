@@ -260,6 +260,9 @@ describe Individuo do
       expect(@persona1<=@persona3).to eq(true)
     end
     
+    it "# Francisco >= Pilar" do
+      expect(@persona2>=@persona3).to eq(false)
+    end
   end
 end
 
