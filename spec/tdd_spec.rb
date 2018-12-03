@@ -236,6 +236,13 @@ describe Dll do
        expect(@dll_list.max).to eq(@etiqueta1)
      end
      
+     it "Comprobando el metodo min" do 
+       @dll_list.insert_tail(@etiqueta1)
+       @dll_list.insert_tail(@etiqueta2)
+       expect(@dll_list.min).to eq(@etiqueta2)
+     end
+     
+     
     end
     
   end
