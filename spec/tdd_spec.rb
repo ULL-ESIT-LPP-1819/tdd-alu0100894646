@@ -244,8 +244,9 @@ describe Individuo do
     end
     
     it "# Jose < Francisco" do 
-      expect(@persona1 < @persona2).to eq(true)
+      expect(@persona1<@persona2).to eq(false)
     end
+    
     
   end
 end

@@ -1,4 +1,5 @@
 class Individuo 
+    include Comparable
     attr_reader :nombre, :apellido
     
     def initialize(nombre,apellido)
@@ -8,6 +9,11 @@ class Individuo
     
     def to_s 
         "#{@nombre} #{@apellido}"
+    end
+    
+    def <=>(other)
+       return nil unless other.instance_of?Individuo
+       @nombre <=> other.nombre
     end
 end
 
