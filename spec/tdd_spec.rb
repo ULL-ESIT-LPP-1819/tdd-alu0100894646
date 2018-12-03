@@ -251,7 +251,17 @@ describe Dll do
      
     end
     
-    
+    context "Lista de Individuos" do 
+      
+      before :each do 
+        @lista = Dll.new()
+        @jose = Individuo.new("Jose","Rodriguez")
+        @francisco = Individuo.new("Francisco","Hernández")
+        @pepito = Individuo.new("Peputo","Perez")
+      end
+      
+      
+    end
     
   end
   
