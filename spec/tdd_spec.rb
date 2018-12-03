@@ -235,6 +235,19 @@ describe Individuo do
     end
     
   end
+  
+  context "Haciendo la clase Individuo Comparable" do 
+    
+    before :all do 
+      @persona1 = Individuo.new("Jose","Rodriguez")
+      @persona2 = Individuo.new("Francisco","Hernandez")
+    end
+    
+    it "# Jose < Francisco" do 
+      expect(@persona1 < @persona2).to eq(true)
+    end
+    
+  end
 end
 
 describe Paciente do
