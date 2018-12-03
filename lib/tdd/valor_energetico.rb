@@ -59,19 +59,20 @@ class ValorEnergetico
     
     def to_s
         
-        puts "Valores Nutricionales para #{@etiqueta} con porciones de tamaño #{@porcion*100}g y con #{@num_porciones} porcion(es)"
-        puts "\t\t Por 100g/ml de producto | IR (por 100g/ml) | Porcion de #{@porcion*100}g/ml | IR por #{@porcion*100}g"
-        puts "Valor Energético  #{@valor_energetico[0]} Kj \t\t | #{(@valor_energetico[0]/@ingesta_recomendada[0]).round(2)*100}%  \t\t| #{(@valor_energetico[0]*@porcion).round(2)}Kj \t\t| #{((@valor_energetico[0]/@ingesta_recomendada[0])*@porcion).round(2)*100}%"        
-        puts "(Kj/Kcal)         #{@valor_energetico[1]} Kcal  \t\t| #{(@valor_energetico[1]/@ingesta_recomendada[1]).round(2)*100}% \t\t| #{(@valor_energetico[1]*@porcion).round(2)}Kcal \t\t| #{((@valor_energetico[1]/@ingesta_recomendada[1])*@porcion).round(2)*100}%"
-        puts "Grasas de las     #{@grasa}g  \t\t| #{(@grasa/@ingesta_recomendada[2]).round(2)*100}%  \t\t| #{(@grasa*@porcion).round(2)} \t\t| #{((@grasa/@ingesta_recomendada[2])*@porcion).round(2)*100}%"
-        puts "cuales:"
-        puts "saturadas         #{@saturada}g  \t\t| #{(@saturada/@ingesta_recomendada[3]).round(2)*100}%  \t\t| #{(@saturada*@porcion).round(2)}g \t\t| #{((@saturada/@ingesta_recomendada[3])*@porcion).round(2)*100}%"
-        puts "Hidratos de       #{@hidratos}g  \t\t| #{(@hidratos/@ingesta_recomendada[4]).round(2)*100}%  \t\t| #{(@hidratos*@porcion).round(2)}g \t\t| #{((@hidratos/@ingesta_recomendada[4])*@porcion).round(2)*100}%"
-        puts "carbono de los "
-        puts "cuales: "
-        puts "Azucares:         #{@azucar}g  \t\t| #{(@azucar/@ingesta_recomendada[5]).round(2)*100}%  \t\t| #{(@azucar*@porcion).round(2)}g \t\t| #{((@azucar/@ingesta_recomendada[5])*@porcion).round(2)*100}%"
-        puts "Proteinas:        #{@proteinas}g  \t\t| #{(@proteinas/@ingesta_recomendada[6]).round(2)*100}%  \t\t| #{(@proteinas*@porcion).round(2)}g \t\t| #{((@proteinas/@ingesta_recomendada[6])*@porcion).round(2)*100}%"
-        puts "Sal:              #{@sal}g  \t\t| #{(@sal/@ingesta_recomendada[7]).round(2)*100}%  \t\t| #{(@proteinas*@porcion).round(2)} \t\t| #{((@sal/@ingesta_recomendada[7])*@porcion).round(2)*100}%"
+        #puts "Valores Nutricionales para #{@etiqueta} con porciones de tamaño #{@porcion*100}g y con #{@num_porciones} porcion(es)"
+        #puts "\t\t Por 100g/ml de producto | IR (por 100g/ml) | Porcion de #{@porcion*100}g/ml | IR por #{@porcion*100}g"
+        #puts "Valor Energético  #{@valor_energetico[0]} Kj \t\t | #{(@valor_energetico[0]/@ingesta_recomendada[0]).round(2)*100}%  \t\t| #{(@valor_energetico[0]*@porcion).round(2)}Kj \t\t| #{((@valor_energetico[0]/@ingesta_recomendada[0])*@porcion).round(2)*100}%"        
+        #puts "(Kj/Kcal)         #{@valor_energetico[1]} Kcal  \t\t| #{(@valor_energetico[1]/@ingesta_recomendada[1]).round(2)*100}% \t\t| #{(@valor_energetico[1]*@porcion).round(2)}Kcal \t\t| #{((@valor_energetico[1]/@ingesta_recomendada[1])*@porcion).round(2)*100}%"
+        #puts "Grasas de las     #{@grasa}g  \t\t| #{(@grasa/@ingesta_recomendada[2]).round(2)*100}%  \t\t| #{(@grasa*@porcion).round(2)} \t\t| #{((@grasa/@ingesta_recomendada[2])*@porcion).round(2)*100}%"
+        #puts "cuales:"
+        #puts "saturadas         #{@saturada}g  \t\t| #{(@saturada/@ingesta_recomendada[3]).round(2)*100}%  \t\t| #{(@saturada*@porcion).round(2)}g \t\t| #{((@saturada/@ingesta_recomendada[3])*@porcion).round(2)*100}%"
+        #puts "Hidratos de       #{@hidratos}g  \t\t| #{(@hidratos/@ingesta_recomendada[4]).round(2)*100}%  \t\t| #{(@hidratos*@porcion).round(2)}g \t\t| #{((@hidratos/@ingesta_recomendada[4])*@porcion).round(2)*100}%"
+        #puts "carbono de los "
+        #puts "cuales: "
+        #puts "Azucares:         #{@azucar}g  \t\t| #{(@azucar/@ingesta_recomendada[5]).round(2)*100}%  \t\t| #{(@azucar*@porcion).round(2)}g \t\t| #{((@azucar/@ingesta_recomendada[5])*@porcion).round(2)*100}%"
+        #puts "Proteinas:        #{@proteinas}g  \t\t| #{(@proteinas/@ingesta_recomendada[6]).round(2)*100}%  \t\t| #{(@proteinas*@porcion).round(2)}g \t\t| #{((@proteinas/@ingesta_recomendada[6])*@porcion).round(2)*100}%"
+        #puts "Sal:              #{@sal}g  \t\t| #{(@sal/@ingesta_recomendada[7]).round(2)*100}%  \t\t| #{(@proteinas*@porcion).round(2)} \t\t| #{((@sal/@ingesta_recomendada[7])*@porcion).round(2)*100}%"
+        "#{@etiqueta}"
     end
     
 end

@@ -1,7 +1,7 @@
 Node = Struct.new(:value,:next,:prev)
 
 class Dll  
-    
+    include Enumerable
     attr_accessor :head,:tail
     
     def initialize
@@ -61,5 +61,16 @@ class Dll
           puts it.value.to_s
           it=it.next
        end
+    end
+    
+    def each 
+       
+       it = @head
+       
+       while it !=nil 
+            yield it.value
+            it=it.next
+       end
+        
     end
 end

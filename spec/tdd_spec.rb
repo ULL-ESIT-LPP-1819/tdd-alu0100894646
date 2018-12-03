@@ -218,8 +218,8 @@ describe Dll do
        @dll_list.insert_tail(@etiqueta2)
        @dll_list.insert_tail(@etiqueta3)
        
-       expect(@dll_list.map{|i| i}).to eq(["Nutella","Galletas","Lomo"])
-       expect(@dll_list.collect{|i| i}).to eq(["Nutella","Galletas","Lomo"])
+       #expect(@dll_list.map{|i| i.to_s}).to eq(["Nutella","Galletas","Lomo"])
+       expect(@dll_list.collect{|i| i.to_s}).to eq(["Nutella","Galletas","Lomo"])
      end
      
     end
