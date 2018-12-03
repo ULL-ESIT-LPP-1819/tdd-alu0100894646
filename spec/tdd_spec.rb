@@ -72,6 +72,18 @@ describe ValorEnergetico do
     
   end
   
+  context "Hacer la Clase Valor Energético comparable" do
+    
+    before :all do
+      @magdalena = ValorEnergetico.new("Magdalena",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+      @galletas = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+      @leche = ValorEnergetico.new("Leche",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+    end
+  
+  it "# Magadalena < Galletas " do 
+    expect(@magdalena < @galletas).to eq(true)
+  end
+end
 end
 
 describe Dll do 
