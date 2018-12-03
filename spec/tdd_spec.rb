@@ -92,7 +92,12 @@ describe ValorEnergetico do
     expect(@leche == @leche).to eq(true)
   end
   
-end
+  it "# Galletas <= Leche " do 
+    expect(@galletas <= @leche).to eq(true)
+  end
+  
+  
+  end
 end
 
 describe Dll do 
