@@ -273,6 +273,12 @@ describe Dll do
         @lista.insert_tail(@pepito)
         expect(@lista.select{|i| i == @jose}).to eq([@jose])
       end
+      
+      it "Comprobando el metodo max " do 
+        @lista.insert_tail(@jose)
+        @lista.insert_tail(@francisco)
+        expect(@lista.max).to eq(@jose)
+      end
     end
     
   end
