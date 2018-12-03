@@ -195,6 +195,37 @@ describe Dll do
     
   end
   
+  context "Haciendo la clase Lista enumerable" do 
+    
+    context "Lista de Etiquetas" do 
+      
+      before :each do 
+        @dll_list = Dll.new()
+        @etiqueta1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+        @etiqueta2 = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,1.0,25.0,8)
+        @etiqueta3 = ValorEnergetico.new("Lomo",31.6,11.0,57.6,56.8,6.0,2.11,25.0,8)
+        @etiqueta4 = ValorEnergetico.new("Mantequilla",31.6,11.0,57.6,56.8,6.0,8.11,25.0,8)
+        @etiqueta5 = ValorEnergetico.new("Pistachos",31.6,11.0,57.6,56.8,6.0,10.11,25.0,8)
+        #@dll_list.insert_head(@etiqueta1)
+        #@dll_list.insert_tail(@etiqueta2)
+        #@dll_list.insert_tail(@etiqueta3)
+        #@dll_list.insert_tail(@etiqueta4)
+        #@dll_list.insert_tail(@etiqueta5)
+      end
+    
+     it "Comprobando el metodo del collect" do 
+       @dll_list.insert_tail(@etiqueta1)
+       @dll_list.insert_tail(@etiqueta2)
+       @dll_list.insert_tail(@etiqueta3)
+       
+       expect(@dll_list.map{|i| i}).to eq(["Nutella","Galletas","Lomo"])
+       expect(@dll_list.collect{|i| i}).to eq(["Nutella","Galletas","Lomo"])
+     end
+     
+    end
+    
+  end
+  
 end
 
 describe Individuo do
