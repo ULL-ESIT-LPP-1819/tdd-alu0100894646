@@ -279,6 +279,12 @@ describe Dll do
         @lista.insert_tail(@francisco)
         expect(@lista.max).to eq(@jose)
       end
+      
+      it "Comprobando el metodo min " do 
+        @lista.insert_tail(@jose)
+        @lista.insert_tail(@francisco)
+        expect(@lista.min).to eq(@francisco)
+      end
     end
     
   end
