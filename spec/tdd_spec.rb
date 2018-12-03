@@ -242,8 +242,16 @@ describe Dll do
        expect(@dll_list.min).to eq(@etiqueta2)
      end
      
+     it "Comprobando el metodo sort" do 
+       @dll_list.insert_tail(@etiqueta1)
+       @dll_list.insert_tail(@etiqueta2)
+       @dll_list.insert_tail(@etiqueta3)
+       expect(@dll_list.sort{ |a,b| b<=>a}).to eq([@etiqueta1,@etiqueta3,@etiqueta2])
+     end
      
     end
+    
+    
     
   end
   
