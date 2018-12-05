@@ -69,7 +69,6 @@ describe ValorEnergetico do
     it "Tiene un método para obtener la etiqueta formateada (to_s)" do
       prueba1.to_s
     end
-    
   end
   
   context "Hacer la Clase Valor Energético comparable" do
@@ -125,7 +124,7 @@ describe Dll do
   
   context "Pruebas de la clase Lista" do 
     
-      lista_prueba = Dll.new()
+    lista_prueba = Dll.new()
     
     it "Tiene un head" do 
       expect(nil).to eq(lista_prueba.head)
