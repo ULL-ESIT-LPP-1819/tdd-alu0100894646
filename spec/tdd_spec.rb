@@ -478,7 +478,7 @@ describe Paciente do
     end
     
     it "Tiene un método para el gasto energético Total" do 
-      expect(@paciente1.gasto_total("Reposo")).to eq(12)
+      expect(@paciente1.gasto_total("Reposo")).to eq(2212.38)
     end
   end 
   

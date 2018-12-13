@@ -93,5 +93,10 @@ class Paciente < Individuo
         
     end
     
-    
+    def gasto_total(actividad)
+        
+        (gasto_energetico_basal + efecto_termogeno + actividad_fisica(actividad)).round(2)
+        
+    end
+        
 end
