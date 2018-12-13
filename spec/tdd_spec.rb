@@ -474,7 +474,7 @@ describe Paciente do
     end
     
     it "Tiene un método para calcular el gasto de la actividad física" do 
-      expect(@paciente1.gasto_act_fisica("Moderada")).to eq(547.04)
+      expect(@paciente1.gasto_act_fisica("Moderada")).to eq(543.04)
     end
   end 
   

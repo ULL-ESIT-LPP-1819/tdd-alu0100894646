@@ -86,4 +86,10 @@ class Paciente < Individuo
        return 0.54 if actividad == "Intensa"
        
     end
+    
+    def gasto_act_fisica(actividad)
+        
+        (actividad_fisica(actividad) * gasto_energetico).round(2)
+        
+    end
 end
