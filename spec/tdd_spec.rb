@@ -369,7 +369,7 @@ end
 describe Paciente do
   
   before :all do
-      @paciente1 = Paciente.new("Pepito","Rguez",100,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente1 = Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0])
   end
     
   context "Comprobando la instancia y clase a la que pertence Paciente" do 
@@ -454,6 +454,14 @@ describe Paciente do
     end
     
   end
+  
+  context " Pruebas para las funciones del menu dietetico" do 
+  
+    it "Tiene un método para calcular el peso teórico ideal " do 
+      expect(@paciente1.peso_ideal).to eq(76.25)
+    end
+  end
+  
   
 end
 
