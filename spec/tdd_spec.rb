@@ -460,6 +460,10 @@ describe Paciente do
     it "Tiene un método para calcular el peso teórico ideal " do 
       expect(@paciente1.peso_ideal).to eq(76.25)
     end
+    
+    it "Tiene un método para calcular el gasto energetico basal según el sexo" do 
+      expect(@paciente1.gasto_energetico).to eq(2311.25)
+    end
   end
   
   
