@@ -54,10 +54,21 @@ class Paciente < Individuo
     end
 
     def to_s 
+        
        "#{super.to_s} #{@peso} #{@talla} #{@edad} #{@sexo} #{@cintura} #{@cadera}" 
+       
     end
     
     def peso_ideal
+        
        ((@talla-150)*0.75 + 50).round(2)
+       
+    end
+    
+    def gasto_energetico
+    
+        return (10*@peso)+(6.25*@talla)-(5*@edad)+5 if @sexo == 1
+        (10*@peso)+(6.25*@talla)-(5*@edad) - 161
+        
     end
 end
