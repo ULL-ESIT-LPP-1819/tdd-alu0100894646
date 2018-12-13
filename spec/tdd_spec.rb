@@ -369,7 +369,7 @@ end
 describe Paciente do
   
   before :all do
-      @paciente1 = Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente1 = Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0],"Actividad Moderada")
   end
     
   context "Comprobando la instancia y clase a la que pertence Paciente" do 
@@ -468,7 +468,11 @@ describe Paciente do
     it "Tiene un método para calcular el efecto termógeno" do 
       expect(@paciente1.efecto_termogeno).to eq(201.13)
     end
-  end
+    
+    it "Tiene una variable que define el factor de actividad física" do 
+      expect(@paciente1.actividad_fisica).to eq(0.12)
+    end
+  end 
   
   
 end
