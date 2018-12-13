@@ -77,4 +77,13 @@ class Paciente < Individuo
         (gasto_energetico * 0.10).round(2)
         
     end
+    
+    def actividad_fisica(actividad)
+        
+       return 0.0 if actividad == "Reposo"
+       return 0.12 if actividad == "Ligera"
+       return 0.27 if actividad == "Moderada"
+       return 0.54 if actividad == "Intensa"
+       
+    end
 end

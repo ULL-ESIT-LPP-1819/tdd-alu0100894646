@@ -369,9 +369,9 @@ end
 describe Paciente do
   
   before :all do
-      @paciente1 = Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0],"Actividad Moderada")
+      @paciente1 = Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0])
   end
-    
+  
   context "Comprobando la instancia y clase a la que pertence Paciente" do 
   
     it "Comprobando la instancia del objeto" do 
@@ -470,7 +470,7 @@ describe Paciente do
     end
     
     it "Tiene una variable que define el factor de actividad física" do 
-      expect(@paciente1.actividad_fisica).to eq(0.12)
+      expect(@paciente1.actividad_fisica("Ligera")).to eq(0.12)
     end
   end 
   
