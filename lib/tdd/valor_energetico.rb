@@ -57,6 +57,10 @@ class ValorEnergetico
         valor_energetico[1]
     end
     
+    def +(other)
+       calc_val_energetico_Kcal+other.calc_val_energetico_Kcal 
+    end
+    
     def to_s
         
         #puts "Valores Nutricionales para #{@etiqueta} con porciones de tamaño #{@porcion*100}g y con #{@num_porciones} porcion(es)"

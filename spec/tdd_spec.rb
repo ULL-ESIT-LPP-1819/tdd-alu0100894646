@@ -416,7 +416,6 @@ describe Paciente do
     
   end
   
-  
   context "Haciendo la prueba de la clasificación de individuos" do 
     
     before :all do
@@ -482,6 +481,44 @@ describe Paciente do
     end
   end 
   
+  context "Pruebas para el menu dietetico" do 
+    
+    before :each do 
+      @paciente1 =  Paciente.new("Pepito","Rguez",100,185,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @etiquetamenu1 = ValorEnergetico.new("Magdalena",23.1,3.2,41.6,20.30,5.4,0.11,25.0,8)
+      @etiquetamenu2 = ValorEnergetico.new("Filete Ternera",2.9,0,0,0,21.85,0,250,1)
+      @etiquetamenu3 = ValorEnergetico.new("Sandia",0.25,0.1,7.55,6.2,0.61,0,100,8)
+      @etiquetamenu4 = ValorEnergetico.new("Arroz Blanco",0.4,0.1,38.0,0.1,3.6,0,135.0,1)
+      @etiquetamenu5 = ValorEnergetico.new("Tallarines",2.1,0.4,70.4,1.3,13.3,0.5,230.0,1)
+      @menu1 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu3]
+      @menu2 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu4]
+      @menu3 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu5]
+      @menu4 = [@etiquetamenu2,@etiquetamenu3,@etiquetamenu4]
+      @menu5 = [@etiquetamenu3,@etiquetamenu4,@etiquetamenu5]
+      @gasto_paciente1 = @paciente1.gasto_total("Ligera")
+    end
+    
+    
+    it "Prueba para el menu 1" do 
+      expect(@menu1.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
+    end
+    
+    it "Prueba para el menu 2"do 
+      expect(@menu2.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
+    end
+    
+    it "Prueba para el menu 3"do 
+      expect(@menu3.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
+    end
+    
+    it "Prueba para el menu 4"do 
+      expect(@menu4.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
+    end
+    
+    it "Prueba para el menu 5"do 
+      expect(@menu5.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
+    end
+  end
   
 end
 
