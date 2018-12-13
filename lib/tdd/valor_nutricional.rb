@@ -56,4 +56,8 @@ class Paciente < Individuo
     def to_s 
        "#{super.to_s} #{@peso} #{@talla} #{@edad} #{@sexo} #{@cintura} #{@cadera}" 
     end
+    
+    def peso_ideal
+       ((@talla-150)*0.75 + 50).round(2)
+    end
 end
