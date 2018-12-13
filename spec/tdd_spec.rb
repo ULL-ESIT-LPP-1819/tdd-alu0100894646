@@ -466,7 +466,7 @@ describe Paciente do
     end
     
     it "Tiene un método para calcular el efecto termógeno" do 
-      expect(@paciente1.efecto_termogeno).to eq(201.12)
+      expect(@paciente1.efecto_termogeno).to eq(201.13)
     end
   end
   

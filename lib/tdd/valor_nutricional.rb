@@ -71,4 +71,10 @@ class Paciente < Individuo
         ((10*@peso)+(6.25*@talla)-(5*@edad) - 161).round(2)
         
     end
+    
+    def efecto_termogeno
+
+        (gasto_energetico * 0.10).round(2)
+        
+    end
 end
