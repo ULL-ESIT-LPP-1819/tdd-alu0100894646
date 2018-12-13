@@ -472,6 +472,10 @@ describe Paciente do
     it "Tiene una variable que define el factor de actividad física" do 
       expect(@paciente1.actividad_fisica("Ligera")).to eq(0.12)
     end
+    
+    it "Tiene un método para calcular el gasto de la actividad física" do 
+      expect(@paciente1.gasto_act_fisica("Moderada")).to eq(547.04)
+    end
   end 
   
   
