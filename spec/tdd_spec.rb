@@ -464,6 +464,10 @@ describe Paciente do
     it "Tiene un método para calcular el gasto energetico basal según el sexo" do 
       expect(@paciente1.gasto_energetico).to eq(2011.25)
     end
+    
+    it "Tiene un método para calcular el efecto termógeno" do 
+      expect(@paciente1.efecto_termogeno).to eq(201.12)
+    end
   end
   
   

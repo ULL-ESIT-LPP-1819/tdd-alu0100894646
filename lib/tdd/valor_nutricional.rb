@@ -67,8 +67,8 @@ class Paciente < Individuo
     
     def gasto_energetico
     
-        return (10*@peso)+(6.25*@talla)-(5*@edad)+5 if @sexo == 1
-        (10*@peso)+(6.25*@talla)-(5*@edad) - 161
+        return ((10*@peso)+(6.25*@talla)-(5*@edad)+5).round(2) if @sexo == 1
+        ((10*@peso)+(6.25*@talla)-(5*@edad) - 161).round(2)
         
     end
 end
