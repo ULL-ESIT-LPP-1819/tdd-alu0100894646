@@ -65,7 +65,7 @@ class Paciente < Individuo
        
     end
     
-    def gasto_energetico
+    def gasto_energetico_basal
     
         return ((10*@peso)+(6.25*@talla)-(5*@edad)+5).round(2) if @sexo == 1
         ((10*@peso)+(6.25*@talla)-(5*@edad) - 161).round(2)
@@ -74,7 +74,7 @@ class Paciente < Individuo
     
     def efecto_termogeno
 
-        (gasto_energetico * 0.10).round(2)
+        (gasto_energetico_basal * 0.10).round(2)
         
     end
     
@@ -89,7 +89,9 @@ class Paciente < Individuo
     
     def gasto_act_fisica(actividad)
         
-        (actividad_fisica(actividad) * gasto_energetico).round(2)
+        (actividad_fisica(actividad) * gasto_energetico_basal).round(2)
         
     end
+    
+    
 end
