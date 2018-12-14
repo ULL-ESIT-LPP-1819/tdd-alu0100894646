@@ -518,6 +518,7 @@ describe Paciente do
     it "Prueba para el menu 5"do 
       expect(@menu5.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)).to be < @gasto_paciente1
     end
+    
   end
   
 end
