@@ -147,6 +147,9 @@ describe ValorEnergetico do
     
   it "Array de elementos ordenador usando bucle for"do 
       
+      Benchmark.bm do |x|
+        
+      x.report("Array con for") {
       @resultado = [@menu1]
       
       for i in 0..9 do 
@@ -167,14 +170,19 @@ describe ValorEnergetico do
           end
         end
       end
+        
+      }end
       
-      for @i in 0..9
-        puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-      end
+      #for @i in 0..9
+      #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+      #end
   end
 
   it "Lista de individuos usando bucle for" do 
       
+      Benchmark.bm do |x|
+        
+      x.report("Lista con for") {
       @resultado = [@paciente1]
       @gasto = 0.0
 
@@ -198,14 +206,18 @@ describe ValorEnergetico do
         end
         
       end
-      
-      for @i in 0..9
-        puts @resultado[@i].gasto_total("Ligera")
-      end
+      }end
+      #for @i in 0..9
+      #  puts @resultado[@i].gasto_total("Ligera")
+      #end
       
   end
     
   it "Array de elementos ordenados usando each " do
+    
+    Benchmark.bm do |x|
+        
+      x.report("Array con each") {
     @resultado = [@menu1]
       
       (0..9).each do |i|
@@ -226,14 +238,18 @@ describe ValorEnergetico do
           end
         end
       end
+      }end 
+      #for @i in 0..9
+      #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+      #end
       
-      for @i in 0..9
-        puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-      end
   end
     
     
   it "Lista de individuos usando each "do 
+    Benchmark.bm do |x|
+        
+      x.report("Lista con each") {
     @resultado = [@paciente1]
       @gasto = 0.0
 
@@ -257,26 +273,32 @@ describe ValorEnergetico do
         end
         
       end
-      
-      for @i in 0..9
-        puts @resultado[@i].gasto_total("Ligera")
-      end
+      }end
+      #for @i in 0..9
+      #  puts @resultado[@i].gasto_total("Ligera")
+      #end
   end
   
   it "Ordenando el array de menus usando el sort" do 
-    @resultado = @arraymenus.sort!{ |x,y| x.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+) <=> y.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)}
-    
-    for @i in 0..9
-        puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-    end
+    Benchmark.bm do |k|
+        
+      k.report("Array con sort!") {
+        @resultado = @arraymenus.sort!{ |x,y| x.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+) <=> y.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)}
+      }end
+    #for @i in 0..9
+    #    puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+    #end
   end
   
   it "Ordenando la lista con el sort" do 
+    Benchmark.bm do |k|
+        
+      k.report("Lista con sort") {
     @resultado = @lista_paciente.sort{|x,y| x.gasto_total("Ligera") <=> y.gasto_total("Ligera")}
-    
-    for @i in 0..9
-        puts @resultado[@i].gasto_total("Ligera")
-    end
+      }end
+    #for @i in 0..9
+    #    puts @resultado[@i].gasto_total("Ligera")
+    #end
   end
   
   end
