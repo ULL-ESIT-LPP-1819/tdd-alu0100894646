@@ -263,11 +263,19 @@ describe ValorEnergetico do
       end
   end
   
-  it "Ordenando la lista de menus usando el sort" do 
+  it "Ordenando el array de menus usando el sort" do 
     @resultado = @arraymenus.sort!{ |x,y| x.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+) <=> y.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)}
     
     for @i in 0..9
         puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+    end
+  end
+  
+  it "Ordenando la lista con el sort" do 
+    @resultado = @lista_paciente.sort{|x,y| x.gasto_total("Ligera") <=> y.gasto_total("Ligera")}
+    
+    for @i in 0..9
+        puts @resultado[@i].gasto_total("Ligera")
     end
   end
   
