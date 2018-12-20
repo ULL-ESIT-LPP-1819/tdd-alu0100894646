@@ -100,6 +100,31 @@ describe ValorEnergetico do
   end
   
   end
+  
+  context "Práctica 11- Array de menus dietetico" do 
+    
+    before :each do
+      @etiquetamenu1 = ValorEnergetico.new("Magdalena",23.1,3.2,41.6,20.30,5.4,0.11,25.0,8)
+      @etiquetamenu2 = ValorEnergetico.new("Filete Ternera",2.9,0,0,0,21.85,0,250,1)
+      @etiquetamenu3 = ValorEnergetico.new("Sandia",0.25,0.1,7.55,6.2,0.61,0,100,8)
+      @etiquetamenu4 = ValorEnergetico.new("Arroz Blanco",0.4,0.1,38.0,0.1,3.6,0,135.0,1)
+      @etiquetamenu5 = ValorEnergetico.new("Tallarines",2.1,0.4,70.4,1.3,13.3,0.5,230.0,1)
+      @menu1 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu3]
+      @menu2 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu4]
+      @menu3 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu5]
+      @menu4 = [@etiquetamenu2,@etiquetamenu3,@etiquetamenu4]
+      @menu5 = [@etiquetamenu3,@etiquetamenu4,@etiquetamenu5]
+      @menu6 = [@etiquetamenu1,@etiquetamenu1,@etiquetamenu1]
+      @menu7 = [@etiquetamenu2,@etiquetamenu2,@etiquetamenu2]
+      @menu8 = [@etiquetamenu3,@etiquetamenu3,@etiquetamenu3]
+      @menu9 = [@etiquetamenu4,@etiquetamenu4,@etiquetamenu4]
+      @menu10 = [@etiquetamenu5,@etiquetamenu5,@etiquetamenu5]
+      @arraymenus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
+      
+    end
+    
+    
+  end
 end
 
 describe Dll do 
