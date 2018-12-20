@@ -10,300 +10,297 @@ RSpec.describe Tdd do
     expect(true).to eq(true)
   end
 
-  describe ValorEnergetico do
-    
+describe ValorEnergetico do
       
-    
-    context "Características de los alimentos" do 
-      
-      prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-      
-      it "Tiene un nombre de etiqueta" do
-        expect("Nutella").to eq(prueba1.etiqueta)
-      end
-    
-      it "Tiene un valor para las grasas " do 
-        expect(31.6).to eq(prueba1.grasa)
-      end
-    
-      it "Tiene un valor para las grasas saturadas" do
-        expect(11.0).to eq(prueba1.saturada)
-      end
-    
-      it "Tiene un valor para la cantidad de hidratos de carbono" do
-        expect(57.6).to eq(prueba1.hidratos)
-      end
-    
-      it "Tiene un valor para la cantidad de azúcar " do
-        expect(56.8).to eq(prueba1.azucar)
-      end
-    
-      it "Tiene un valor para las proteínas " do 
-        expect(6.0).to eq(prueba1.proteinas)
-      end
-    
-      it "Tiene un valor para la cantidad de sal" do
-        expect(0.11).to eq(prueba1.sal)
-      end
-    end 
-  
-  context "Funciones de la clase ValorEnergetico"do 
-    
-    prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-    
-    it "Tiene un método para calcular el valor energético en kJ" do 
-      prueba1.calc_val_energetico_KJ
-    end
-  
-    it "Calcula el valor energético de un alimento en kJ" do
-      expect(2253.15).to eq(prueba1.calc_val_energetico_KJ);
-    end
-    
-    it "Tienhe un método para calcular el valor energetico en Kcal" do 
-      prueba1.calc_val_energetico_Kcal
-    end
-    
-    it "Calcula el valor energetico para un alimento en Kcal"do
-      expect(539.46).to eq(prueba1.calc_val_energetico_Kcal  )
-    end
-    
-    it "Tiene un método para obtener la etiqueta formateada (to_s)" do
-      prueba1.to_s
-    end
-  end
-  
-  context "Hacer la Clase Valor Energético comparable" do
-    
-    before :all do
-      @magdalena = ValorEnergetico.new("Magdalena",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-      @galletas = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-      @leche = ValorEnergetico.new("Leche",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
-    end
-  
-  it "# Magadalena > Galletas " do 
-    expect(@magdalena > @galletas).to eq(true)
-  end
-
-  it "# Galletas < Leche" do 
-    expect(@galletas < @leche).to eq(true)
-  end
-  
-  it " # Leche == Leche " do 
-    expect(@leche == @leche).to eq(true)
-  end
-  
-  it "# Galletas <= Leche " do 
-    expect(@galletas <= @leche).to eq(true)
-  end
-  
-  it "# Magdalena >= Leche" do 
-    expect(@magdalena >= @leche).to eq(true)
-  end
-  
-  end
-  
-  context "Práctica 11- Array de menus dietetico y lista de pacientes" do 
-    
-    before :each do
-      @etiquetamenu1 = ValorEnergetico.new("Magdalena",23.1,3.2,41.6,20.30,5.4,0.11,25.0,8)
-      @etiquetamenu2 = ValorEnergetico.new("Filete Ternera",2.9,0,0,0,21.85,0,250,1)
-      @etiquetamenu3 = ValorEnergetico.new("Sandia",0.25,0.1,7.55,6.2,0.61,0,100,8)
-      @etiquetamenu4 = ValorEnergetico.new("Arroz Blanco",0.4,0.1,38.0,0.1,3.6,0,135.0,1)
-      @etiquetamenu5 = ValorEnergetico.new("Tallarines",2.1,0.4,70.4,1.3,13.3,0.5,230.0,1)
-      @menu1 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu3]
-      @menu2 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu4]
-      @menu3 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu5]
-      @menu4 = [@etiquetamenu2,@etiquetamenu3,@etiquetamenu4]
-      @menu5 = [@etiquetamenu3,@etiquetamenu4,@etiquetamenu5]
-      @menu6 = [@etiquetamenu1,@etiquetamenu1,@etiquetamenu1]
-      @menu7 = [@etiquetamenu2,@etiquetamenu2,@etiquetamenu2]
-      @menu8 = [@etiquetamenu3,@etiquetamenu3,@etiquetamenu3]
-      @menu9 = [@etiquetamenu4,@etiquetamenu4,@etiquetamenu4]
-      @menu10 = [@etiquetamenu5,@etiquetamenu5,@etiquetamenu5]
-      @arraymenus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
-      
-      @paciente1 = Paciente.new("Pepito","Rguez",150,1.82,30,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente2 = Paciente.new("Manoltio","Gafotas",100,1.75,60,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente3 = Paciente.new("Doraemon","El gato",85,1.65,17,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente4 = Paciente.new("Raul","Zamora",70,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente5 = Paciente.new("Manuel","Hdez",55,1.85,68,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente6 = Paciente.new("Pepito2","Rguez",130,1.80,16,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente7 = Paciente.new("Manoltio2","Gafotas",100,1.85,45,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente8 = Paciente.new("Doraemon2","El gato",85,1.95,39,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente9 = Paciente.new("Raul2","Zamora",70,1.85,32,"Hombre",[55.0,57.0],[60.0,63.0])
-      @paciente10 = Paciente.new("Manuel2","Hdez",55,1.65,20,"Hombre",[55.0,57.0],[60.0,63.0])
-      
-      @lista_paciente = Dll.new();
-      @lista_paciente.insert_tail(@paciente1)
-      @lista_paciente.insert_tail(@paciente2)
-      @lista_paciente.insert_tail(@paciente3)
-      @lista_paciente.insert_tail(@paciente4)
-      @lista_paciente.insert_tail(@paciente5)
-      @lista_paciente.insert_tail(@paciente6)
-      @lista_paciente.insert_tail(@paciente7)
-      @lista_paciente.insert_tail(@paciente8)
-      @lista_paciente.insert_tail(@paciente9)
-      @lista_paciente.insert_tail(@paciente10)
-    end
-    
-  it "Array de elementos ordenador usando bucle for"do 
-      
-      Benchmark.bm do |x|
-        
-      x.report("Array con for") {
-      @resultado = [@menu1]
-      
-      for i in 0..9 do 
-        
-        @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-        
-        for j in 0..(@resultado.length-1) do 
+      context "Características de los alimentos" do 
           
-          @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+          prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
           
-          if @kcal < @tmp
-            @resultado.insert(j,@arraymenus[i])
-            break
+          it "Tiene un nombre de etiqueta" do
+            expect("Nutella").to eq(prueba1.etiqueta)
           end
-          
-          if j == (@resultado.length-1)
-            @resultado.insert(j,@arraymenus[i])
+        
+          it "Tiene un valor para las grasas " do 
+            expect(31.6).to eq(prueba1.grasa)
           end
+        
+          it "Tiene un valor para las grasas saturadas" do
+            expect(11.0).to eq(prueba1.saturada)
+          end
+        
+          it "Tiene un valor para la cantidad de hidratos de carbono" do
+            expect(57.6).to eq(prueba1.hidratos)
+          end
+        
+          it "Tiene un valor para la cantidad de azúcar " do
+            expect(56.8).to eq(prueba1.azucar)
+          end
+        
+          it "Tiene un valor para las proteínas " do 
+            expect(6.0).to eq(prueba1.proteinas)
+          end
+        
+          it "Tiene un valor para la cantidad de sal" do
+            expect(0.11).to eq(prueba1.sal)
+          end
+      end 
+      
+      context "Funciones de la clase ValorEnergetico"do 
+        
+        prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+        
+        it "Tiene un método para calcular el valor energético en kJ" do 
+          prueba1.calc_val_energetico_KJ
         end
-      end
-        
-      }end
       
-      #for @i in 0..9
-      #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-      #end
-  end
-
-  it "Lista de individuos usando bucle for" do 
-      
-      Benchmark.bm do |x|
-        
-      x.report("Lista con for") {
-      @resultado = [@paciente1]
-      @gasto = 0.0
-
-      for i in 0..9 do  
-        
-        @node = @lista_paciente.get_head.value
-        @gasto = @node.gasto_total("Ligera")
-        
-        for j in 0..(@resultado.length-1) do
-          
-          @tmp = @resultado[j].gasto_total("Ligera")
-          
-          if @gasto < @tmp
-            @resultado.insert(j,@node)
-            break
-          end
-          
-          if j ==(@resultado.length-1)
-            @resultado.insert(j,@node)
-          end
+        it "Calcula el valor energético de un alimento en kJ" do
+          expect(2253.15).to eq(prueba1.calc_val_energetico_KJ);
         end
         
-      end
-      }end
-      #for @i in 0..9
-      #  puts @resultado[@i].gasto_total("Ligera")
-      #end
-      
-  end
-    
-  it "Array de elementos ordenados usando each " do
-    
-    Benchmark.bm do |x|
-        
-      x.report("Array con each") {
-    @resultado = [@menu1]
-      
-      (0..9).each do |i|
-        
-        @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-        
-        (0..(@resultado.length-1)).each do |j|
-          
-          @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-          
-          if @kcal < @tmp
-            @resultado.insert(j,@arraymenus[i])
-            break
-          end
-          
-          if j == (@resultado.length-1)
-            @resultado.insert(j,@arraymenus[i])
-          end
-        end
-      end
-      }end 
-      #for @i in 0..9
-      #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-      #end
-      
-  end
-    
-    
-  it "Lista de individuos usando each "do 
-    Benchmark.bm do |x|
-        
-      x.report("Lista con each") {
-    @resultado = [@paciente1]
-      @gasto = 0.0
-
-      (0..9).each do |i|  
-        
-        @node = @lista_paciente.get_head.value
-        @gasto = @node.gasto_total("Ligera")
-        
-        (0..(@resultado.length-1)).each do |j|
-          
-          @tmp = @resultado[j].gasto_total("Ligera")
-          
-          if @gasto < @tmp
-            @resultado.insert(j,@node)
-            break
-          end
-          
-          if j ==(@resultado.length-1)
-            @resultado.insert(j,@node)
-          end
+        it "Tienhe un método para calcular el valor energetico en Kcal" do 
+          prueba1.calc_val_energetico_Kcal
         end
         
+        it "Calcula el valor energetico para un alimento en Kcal"do
+          expect(539.46).to eq(prueba1.calc_val_energetico_Kcal  )
+        end
+        
+        it "Tiene un método para obtener la etiqueta formateada (to_s)" do
+          prueba1.to_s
+        end
       end
-      }end
-      #for @i in 0..9
-      #  puts @resultado[@i].gasto_total("Ligera")
-      #end
-  end
-  
-  it "Ordenando el array de menus usando el sort" do 
-    Benchmark.bm do |k|
+      
+      context "Hacer la Clase Valor Energético comparable" do
         
-      k.report("Array con sort!") {
-        @resultado = @arraymenus.sort!{ |x,y| x.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+) <=> y.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)}
-      }end
-    #for @i in 0..9
-    #    puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
-    #end
-  end
-  
-  it "Ordenando la lista con el sort" do 
-    Benchmark.bm do |k|
+        before :all do
+          @magdalena = ValorEnergetico.new("Magdalena",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+          @galletas = ValorEnergetico.new("Galletas",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+          @leche = ValorEnergetico.new("Leche",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
+        end
+      
+        it "# Magadalena > Galletas " do 
+          expect(@magdalena > @galletas).to eq(true)
+        end
+    
+        it "# Galletas < Leche" do 
+          expect(@galletas < @leche).to eq(true)
+        end
         
-      k.report("Lista con sort") {
-    @resultado = @lista_paciente.sort{|x,y| x.gasto_total("Ligera") <=> y.gasto_total("Ligera")}
-      }end
-    #for @i in 0..9
-    #    puts @resultado[@i].gasto_total("Ligera")
-    #end
-  end
-  
-  end
-end
+        it " # Leche == Leche " do 
+          expect(@leche == @leche).to eq(true)
+        end
+        
+        it "# Galletas <= Leche " do 
+          expect(@galletas <= @leche).to eq(true)
+        end
+        
+        it "# Magdalena >= Leche" do 
+          expect(@magdalena >= @leche).to eq(true)
+        end
+      end
+      
+      context "Práctica 11- Array de menus dietetico y lista de pacientes" do 
+        
+        before :each do
+          @etiquetamenu1 = ValorEnergetico.new("Magdalena",23.1,3.2,41.6,20.30,5.4,0.11,25.0,8)
+          @etiquetamenu2 = ValorEnergetico.new("Filete Ternera",2.9,0,0,0,21.85,0,250,1)
+          @etiquetamenu3 = ValorEnergetico.new("Sandia",0.25,0.1,7.55,6.2,0.61,0,100,8)
+          @etiquetamenu4 = ValorEnergetico.new("Arroz Blanco",0.4,0.1,38.0,0.1,3.6,0,135.0,1)
+          @etiquetamenu5 = ValorEnergetico.new("Tallarines",2.1,0.4,70.4,1.3,13.3,0.5,230.0,1)
+          @menu1 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu3]
+          @menu2 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu4]
+          @menu3 = [@etiquetamenu1,@etiquetamenu2,@etiquetamenu5]
+          @menu4 = [@etiquetamenu2,@etiquetamenu3,@etiquetamenu4]
+          @menu5 = [@etiquetamenu3,@etiquetamenu4,@etiquetamenu5]
+          @menu6 = [@etiquetamenu1,@etiquetamenu1,@etiquetamenu1]
+          @menu7 = [@etiquetamenu2,@etiquetamenu2,@etiquetamenu2]
+          @menu8 = [@etiquetamenu3,@etiquetamenu3,@etiquetamenu3]
+          @menu9 = [@etiquetamenu4,@etiquetamenu4,@etiquetamenu4]
+          @menu10 = [@etiquetamenu5,@etiquetamenu5,@etiquetamenu5]
+          @arraymenus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
+          
+          @paciente1 = Paciente.new("Pepito","Rguez",150,1.82,30,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente2 = Paciente.new("Manoltio","Gafotas",100,1.75,60,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente3 = Paciente.new("Doraemon","El gato",85,1.65,17,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente4 = Paciente.new("Raul","Zamora",70,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente5 = Paciente.new("Manuel","Hdez",55,1.85,68,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente6 = Paciente.new("Pepito2","Rguez",130,1.80,16,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente7 = Paciente.new("Manoltio2","Gafotas",100,1.85,45,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente8 = Paciente.new("Doraemon2","El gato",85,1.95,39,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente9 = Paciente.new("Raul2","Zamora",70,1.85,32,"Hombre",[55.0,57.0],[60.0,63.0])
+          @paciente10 = Paciente.new("Manuel2","Hdez",55,1.65,20,"Hombre",[55.0,57.0],[60.0,63.0])
+          
+          @lista_paciente = Dll.new();
+          @lista_paciente.insert_tail(@paciente1)
+          @lista_paciente.insert_tail(@paciente2)
+          @lista_paciente.insert_tail(@paciente3)
+          @lista_paciente.insert_tail(@paciente4)
+          @lista_paciente.insert_tail(@paciente5)
+          @lista_paciente.insert_tail(@paciente6)
+          @lista_paciente.insert_tail(@paciente7)
+          @lista_paciente.insert_tail(@paciente8)
+          @lista_paciente.insert_tail(@paciente9)
+          @lista_paciente.insert_tail(@paciente10)
+        end
+        
+        it "Array de elementos ordenador usando bucle for"do 
+            
+            Benchmark.bm do |x|
+              
+            x.report("Array con for") {
+            @resultado = [@menu1]
+            
+            for i in 0..9 do 
+              
+              @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+              
+              for j in 0..(@resultado.length-1) do 
+                
+                @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+                
+                if @kcal < @tmp
+                  @resultado.insert(j,@arraymenus[i])
+                  break
+                end
+                
+                if j == (@resultado.length-1)
+                  @resultado.insert(j,@arraymenus[i])
+                end
+              end
+            end
+              
+            }end
+            
+            #for @i in 0..9
+            #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+            #end
+        end
+      
+        it "Lista de individuos usando bucle for" do 
+            
+            Benchmark.bm do |x|
+              
+            x.report("Lista con for") {
+              @resultado = [@paciente1]
+              @gasto = 0.0
+        
+              for i in 0..9 do  
+                
+                @node = @lista_paciente.get_head.value
+                @gasto = @node.gasto_total("Ligera")
+                
+                for j in 0..(@resultado.length-1) do
+                  
+                  @tmp = @resultado[j].gasto_total("Ligera")
+                  
+                  if @gasto < @tmp
+                    @resultado.insert(j,@node)
+                    break
+                  end
+                  
+                  if j ==(@resultado.length-1)
+                    @resultado.insert(j,@node)
+                  end
+                end
+                
+              end
+            }end
+            #for @i in 0..9
+            #  puts @resultado[@i].gasto_total("Ligera")
+            #end
+            
+        end
+          
+        it "Array de elementos ordenados usando each " do
+          
+          Benchmark.bm do |x|
+              
+            x.report("Array con each") {
+              @resultado = [@menu1]
+              
+              (0..9).each do |i|
+                
+                @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+                
+                (0..(@resultado.length-1)).each do |j|
+                  
+                  @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+                  
+                  if @kcal < @tmp
+                    @resultado.insert(j,@arraymenus[i])
+                    break
+                  end
+                  
+                  if j == (@resultado.length-1)
+                    @resultado.insert(j,@arraymenus[i])
+                  end
+                end
+              end
+            }end 
+            #for @i in 0..9
+            #  puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+            #end
+            
+        end
+          
+          
+        it "Lista de individuos usando each "do 
+          Benchmark.bm do |x|
+              
+            x.report("Lista con each") {
+              @resultado = [@paciente1]
+              @gasto = 0.0
+        
+              (0..9).each do |i|  
+                
+                @node = @lista_paciente.get_head.value
+                @gasto = @node.gasto_total("Ligera")
+                
+                (0..(@resultado.length-1)).each do |j|
+                  
+                  @tmp = @resultado[j].gasto_total("Ligera")
+                  
+                  if @gasto < @tmp
+                    @resultado.insert(j,@node)
+                    break
+                  end
+                  
+                  if j ==(@resultado.length-1)
+                    @resultado.insert(j,@node)
+                  end
+                end
+                
+              end
+            }end
+            #for @i in 0..9
+            #  puts @resultado[@i].gasto_total("Ligera")
+            #end
+        end
+        
+        it "Ordenando el array de menus usando el sort" do 
+          Benchmark.bm do |k|
+              
+            k.report("Array con sort!") {
+              @resultado = @arraymenus.sort!{ |x,y| x.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+) <=> y.collect{|i| i.calc_val_energetico_Kcal}.reduce(:+)}
+          }end
+          #for @i in 0..9
+          #    puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+          #end
+        end
+        
+        it "Ordenando la lista con el sort" do 
+          Benchmark.bm do |k|
+              
+            k.report("Lista con sort") {
+          @resultado = @lista_paciente.sort{|x,y| x.gasto_total("Ligera") <=> y.gasto_total("Ligera")}
+            }end
+          #for @i in 0..9
+          #    puts @resultado[@i].gasto_total("Ligera")
+          #end
+        end
+        
+        end
+      end
 
 describe Dll do 
   
@@ -723,8 +720,6 @@ describe Paciente do
     end
     
   end
-  
-  
 end
 
 end
