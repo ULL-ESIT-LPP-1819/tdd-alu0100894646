@@ -101,7 +101,7 @@ describe ValorEnergetico do
   
   end
   
-  context "Práctica 11- Array de menus dietetico" do 
+  context "Práctica 11- Array de menus dietetico y lista de pacientes" do 
     
     before :each do
       @etiquetamenu1 = ValorEnergetico.new("Magdalena",23.1,3.2,41.6,20.30,5.4,0.11,25.0,8)
@@ -121,6 +121,28 @@ describe ValorEnergetico do
       @menu10 = [@etiquetamenu5,@etiquetamenu5,@etiquetamenu5]
       @arraymenus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
       
+      @paciente1 = Paciente.new("Pepito","Rguez",150,1.82,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente2 = Paciente.new("Manoltio","Gafotas",100,1.75,60,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente3 = Paciente.new("Doraemon","El gato",85,1.65,17,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente4 = Paciente.new("Raul","Zamora",70,1.85,30,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente5 = Paciente.new("Manuel","Hdez",55,1.85,68,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente6 = Paciente.new("Pepito2","Rguez",130,1.80,16,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente7 = Paciente.new("Manoltio2","Gafotas",100,1.85,45,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente8 = Paciente.new("Doraemon2","El gato",85,1.95,39,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente9 = Paciente.new("Raul2","Zamora",70,1.85,32,"Hombre",[55.0,57.0],[60.0,63.0])
+      @paciente10 = Paciente.new("Manuel2","Hdez",55,1.65,20,"Hombre",[55.0,57.0],[60.0,63.0])
+      
+      @lista_paciente = Dll.new();
+      @lista_paciente.insert_tail(@paciente1)
+      @lista_paciente.insert_tail(@paciente2)
+      @lista_paciente.insert_tail(@paciente3)
+      @lista_paciente.insert_tail(@paciente4)
+      @lista_paciente.insert_tail(@paciente5)
+      @lista_paciente.insert_tail(@paciente6)
+      @lista_paciente.insert_tail(@paciente7)
+      @lista_paciente.insert_tail(@paciente8)
+      @lista_paciente.insert_tail(@paciente9)
+      @lista_paciente.insert_tail(@paciente10)
     end
     
     
@@ -545,6 +567,7 @@ describe Paciente do
     end
     
   end
+  
   
 end
 
