@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "tdd"
-require 'coveralls'
+require "coveralls"
 Coveralls.wear!
 
 RSpec.configure do |config|
