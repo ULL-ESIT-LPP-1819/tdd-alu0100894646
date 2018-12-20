@@ -300,7 +300,7 @@ describe ValorEnergetico do
         end
         
         end
-      end
+end
 
 describe Dll do 
   
@@ -494,7 +494,6 @@ describe Dll do
     end
     
   end
-  
 end
 
 describe Individuo do
