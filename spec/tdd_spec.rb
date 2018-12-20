@@ -11,11 +11,11 @@ RSpec.describe Tdd do
   end
 
 describe ValorEnergetico do
-      
-      context "Características de los alimentos" do 
-          before :all  do
+      before :all  do
             @prueba1 = ValorEnergetico.new("Nutella",31.6,11.0,57.6,56.8,6.0,0.11,25.0,8)
           end
+      context "Características de los alimentos" do 
+          
           it "Tiene un nombre de etiqueta" do
             expect("Nutella").to eq(@prueba1.etiqueta)
           end
