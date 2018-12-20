@@ -145,7 +145,125 @@ describe ValorEnergetico do
       @lista_paciente.insert_tail(@paciente10)
     end
     
+  it "Array de elementos ordenador usando bucle for"do 
+      
+      @resultado = [@menu1]
+      
+      for i in 0..9 do 
+        
+        @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+        
+        for j in 0..(@resultado.length-1) do 
+          
+          @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+          
+          if @kcal < @tmp
+            @resultado.insert(j,@arraymenus[i])
+            break
+          end
+          
+          if j == (@resultado.length-1)
+            @resultado.insert(j,@arraymenus[i])
+          end
+        end
+      end
+      
+      for @i in 0..9
+        puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+      end
+  end
+
+  it "Lista de individuos usando bucle for" do 
+      
+      @resultado = [@paciente1]
+      @gasto = 0.0
+
+      for i in 0..9 do  
+        
+        @node = @lista_paciente.get_head.value
+        @gasto = @node.gasto_total("Ligera")
+        
+        for j in 0..(@resultado.length-1) do
+          
+          @tmp = @resultado[j].gasto_total("Ligera")
+          
+          if @gasto < @tmp
+            @resultado.insert(j,@node)
+            break
+          end
+          
+          if j ==(@resultado.length-1)
+            @resultado.insert(j,@node)
+          end
+        end
+        
+      end
+      
+      for @i in 0..9
+        puts @resultado[@i].gasto_total("Ligera")
+      end
+      
+  end
     
+  it "Array de elementos ordenados usando each " do
+    @resultado = [@menu1]
+      
+      (0..9).each do |i|
+        
+        @kcal = @arraymenus[i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+        
+        (0..(@resultado.length-1)).each do |j|
+          
+          @tmp = @resultado[j].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+          
+          if @kcal < @tmp
+            @resultado.insert(j,@arraymenus[i])
+            break
+          end
+          
+          if j == (@resultado.length-1)
+            @resultado.insert(j,@arraymenus[i])
+          end
+        end
+      end
+      
+      for @i in 0..9
+        puts @resultado[@i].collect{|y| y.calc_val_energetico_Kcal}.reduce(:+)
+      end
+  end
+    
+    
+  it "Lista de individuos usando each "do 
+    @resultado = [@paciente1]
+      @gasto = 0.0
+
+      (0..9).each do |i|  
+        
+        @node = @lista_paciente.get_head.value
+        @gasto = @node.gasto_total("Ligera")
+        
+        (0..(@resultado.length-1)).each do |j|
+          
+          @tmp = @resultado[j].gasto_total("Ligera")
+          
+          if @gasto < @tmp
+            @resultado.insert(j,@node)
+            break
+          end
+          
+          if j ==(@resultado.length-1)
+            @resultado.insert(j,@node)
+          end
+        end
+        
+      end
+      
+      for @i in 0..9
+        puts @resultado[@i].gasto_total("Ligera")
+      end
+  end
+  
+  
   end
 end
 

@@ -54,6 +54,7 @@ class Dll
         @head == nil
         @tail == nil
     end
+
     
     def to_s
        it = @head
