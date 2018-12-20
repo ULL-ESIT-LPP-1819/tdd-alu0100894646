@@ -33,3 +33,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tdd.
+
+https://coveralls.io/repos/github/ULL-ESIT-LPP-1819/tdd-alu0100894646/badge.svg?branch=master(Coverage Status)!:https://coveralls.io/github/ULL-ESIT-LPP-1819/tdd-alu0100894646?branch=master
