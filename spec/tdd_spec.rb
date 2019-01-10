@@ -713,4 +713,8 @@ describe Paciente do
   end
 end
 
+describe Dieta_dsl do 
+  
+end
+
 end
