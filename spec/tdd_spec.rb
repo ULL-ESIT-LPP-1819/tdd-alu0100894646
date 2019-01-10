@@ -765,8 +765,10 @@ describe Dieta_dsl do
     end
   end
   context "Puebas de Código de dominio especifico" do 
-    
-    it "Creación del menu DSL" do 
+    it "Prueba del menu" do 
+      expect(@menu.is_a?Dieta_dsl).to eq(true)
+    end
+    it "To_s" do 
       puts @menu.to_s
     end
   end
