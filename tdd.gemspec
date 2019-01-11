@@ -6,7 +6,7 @@ require "tdd/version"
 Gem::Specification.new do |spec|
   spec.name          = "alu0100894646menu"
   spec.version       = Tdd::VERSION
-  spec.authors       = ["José F Rodríguez Hernández"]
+  spec.authors       = ["alu0100894646"]
   spec.email         = ["alu0100894646@ull.edu.es"]
 
   spec.summary       = %q{"Gema para la práctica TDD LPP"}
