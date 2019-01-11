@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tdd (0.1.0)
+    alu0100894646menu (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -98,6 +98,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  alu0100894646menu!
   bundler (~> 1.17)
   coveralls
   guard
@@ -105,7 +106,6 @@ DEPENDENCIES
   guard-rspec
   rake (~> 10.0)
   rspec (~> 3.0)
-  tdd!
 
 BUNDLED WITH
    1.17.1
